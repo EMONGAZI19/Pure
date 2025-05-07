@@ -5,7 +5,7 @@ document.addEventListener("DOMContentLoaded", function () {
   // Toggle menu on menu icon click
   menuToggle.addEventListener('click', (event) => {
     navMenu.classList.toggle('active');
-    event.stopPropagation();
+    event.stopPropagation(); // Prevent event from bubbling up
   });
 
   // Close menu if clicked outside
@@ -67,17 +67,18 @@ document.addEventListener("DOMContentLoaded", function () {
     const searchQuery = document.getElementById('searchInput').value.toLowerCase();
     const movieCards = document.querySelectorAll('.movie-card');
     const movieSections = document.querySelectorAll('.movie-section');
+
     let found = false;
 
-    // Remove old message if exists
-    document.getElementById('noResultMessage')?.remove();
-
     if (searchQuery.trim() === "") {
+      // যদি কিছু লেখা না থাকে, সব সেকশন দেখাও
       movieSections.forEach(section => section.style.display = '');
       movieCards.forEach(card => card.style.display = '');
+      document.getElementById('noResultMessage')?.remove();
       return;
     }
 
+    // সব সেকশন লুকাও
     movieSections.forEach(section => section.style.display = 'none');
 
     movieCards.forEach(card => {
@@ -92,19 +93,20 @@ document.addEventListener("DOMContentLoaded", function () {
       }
     });
 
+    // ফলাফল না পেলে মেসেজ দেখাও
+    let noResultMessage = document.getElementById('noResultMessage');
     if (!found) {
-      const message = document.createElement('p');
-      message.id = 'noResultMessage';
-      message.textContent = 'এই মুভি টি নেই, রিকুয়েস্ট বাটন থেকে রিকুয়েস্ট করুন';
-      message.style.textAlign = 'center';
-      message.style.color = '#ff4444';
-      message.style.marginTop = '15px';
-      message.style.fontWeight = 'bold';
-
-      const searchContainer = document.querySelector('.search-container');
-      if (searchContainer) {
-        searchContainer.insertAdjacentElement('afterend', message);
+      if (!noResultMessage) {
+        noResultMessage = document.createElement('div');
+        noResultMessage.id = 'noResultMessage';
+        noResultMessage.style.textAlign = 'center';
+        noResultMessage.style.color = '#ff4444';
+        noResultMessage.style.margin = '20px';
+        noResultMessage.textContent = 'এই মুভি টি নেই, রিকুয়েস্ট বাটন থেকে রিকুয়েস্ট করুন';
+        document.body.appendChild(noResultMessage);
       }
+    } else {
+      noResultMessage?.remove();
     }
   }
 
