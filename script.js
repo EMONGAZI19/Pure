@@ -5,7 +5,7 @@ document.addEventListener("DOMContentLoaded", function () {
   // Toggle menu on menu icon click
   menuToggle.addEventListener('click', (event) => {
     navMenu.classList.toggle('active');
-    event.stopPropagation(); // Prevent event from bubbling up
+    event.stopPropagation();
   });
 
   // Close menu if clicked outside
@@ -67,13 +67,14 @@ document.addEventListener("DOMContentLoaded", function () {
     const searchQuery = document.getElementById('searchInput').value.toLowerCase();
     const movieCards = document.querySelectorAll('.movie-card');
     const movieSections = document.querySelectorAll('.movie-section');
-
     let found = false;
+
+    // Remove old message if exists
+    document.getElementById('noResultMessage')?.remove();
 
     if (searchQuery.trim() === "") {
       movieSections.forEach(section => section.style.display = '');
       movieCards.forEach(card => card.style.display = '');
-      document.getElementById('noResultMessage')?.remove();
       return;
     }
 
@@ -91,27 +92,19 @@ document.addEventListener("DOMContentLoaded", function () {
       }
     });
 
-    let noResultMessage = document.getElementById('noResultMessage');
     if (!found) {
-      if (!noResultMessage) {
-        noResultMessage = document.createElement('div');
-        noResultMessage.id = 'noResultMessage';
-        noResultMessage.style.textAlign = 'center';
-        noResultMessage.style.color = '#ff4444';
-        noResultMessage.style.marginTop = '15px';
-        noResultMessage.style.fontWeight = 'bold';
-        noResultMessage.textContent = 'এই মুভি টি নেই, রিকুয়েস্ট বাটন থেকে রিকুয়েস্ট করুন';
+      const message = document.createElement('p');
+      message.id = 'noResultMessage';
+      message.textContent = 'এই মুভি টি নেই, রিকুয়েস্ট বাটন থেকে রিকুয়েস্ট করুন';
+      message.style.textAlign = 'center';
+      message.style.color = '#ff4444';
+      message.style.marginTop = '15px';
+      message.style.fontWeight = 'bold';
 
-        // search bar এর নিচে বসানো
-        const searchContainer = document.querySelector('.search-container');
-        if (searchContainer) {
-          searchContainer.insertAdjacentElement('afterend', noResultMessage);
-        } else {
-          document.body.appendChild(noResultMessage); // fallback
-        }
+      const searchContainer = document.querySelector('.search-container');
+      if (searchContainer) {
+        searchContainer.insertAdjacentElement('afterend', message);
       }
-    } else {
-      noResultMessage?.remove();
     }
   }
 
