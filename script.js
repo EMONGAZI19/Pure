@@ -71,14 +71,12 @@ document.addEventListener("DOMContentLoaded", function () {
     let found = false;
 
     if (searchQuery.trim() === "") {
-      // যদি কিছু লেখা না থাকে, সব সেকশন দেখাও
       movieSections.forEach(section => section.style.display = '');
       movieCards.forEach(card => card.style.display = '');
       document.getElementById('noResultMessage')?.remove();
       return;
     }
 
-    // সব সেকশন লুকাও
     movieSections.forEach(section => section.style.display = 'none');
 
     movieCards.forEach(card => {
@@ -93,7 +91,6 @@ document.addEventListener("DOMContentLoaded", function () {
       }
     });
 
-    // ফলাফল না পেলে মেসেজ দেখাও
     let noResultMessage = document.getElementById('noResultMessage');
     if (!found) {
       if (!noResultMessage) {
@@ -101,9 +98,17 @@ document.addEventListener("DOMContentLoaded", function () {
         noResultMessage.id = 'noResultMessage';
         noResultMessage.style.textAlign = 'center';
         noResultMessage.style.color = '#ff4444';
-        noResultMessage.style.margin = '20px';
+        noResultMessage.style.marginTop = '15px';
+        noResultMessage.style.fontWeight = 'bold';
         noResultMessage.textContent = 'এই মুভি টি নেই, রিকুয়েস্ট বাটন থেকে রিকুয়েস্ট করুন';
-        document.body.appendChild(noResultMessage);
+
+        // search bar এর নিচে বসানো
+        const searchContainer = document.querySelector('.search-container');
+        if (searchContainer) {
+          searchContainer.insertAdjacentElement('afterend', noResultMessage);
+        } else {
+          document.body.appendChild(noResultMessage); // fallback
+        }
       }
     } else {
       noResultMessage?.remove();
