@@ -25,29 +25,31 @@ function createMovieCard(movie) {
   return movieCard;
 }
 
-function loadMovies(category) {
+function loadMovies(category, showAll = false) {
   const movieContainer = document.getElementById(category);
   movieContainer.innerHTML = '';
 
   const moviesCategory = movies[category];
+  const limit = showAll ? moviesCategory.length : 12;
 
-  for (let i = 0; i < Math.min(moviesCategory.length, 12); i++) {
+  for (let i = 0; i < limit; i++) {
     const movie = moviesCategory[i];
     const movieCard = createMovieCard(movie);
     movieContainer.appendChild(movieCard);
   }
+
+  // Update button text
+  const button = document.querySelector(`button[data-category="${category}"]`);
+  if (button) {
+    button.textContent = showAll ? 'Show Less' : 'See All';
+    button.setAttribute('data-showing-all', showAll);
+  }
 }
 
-function showAll(category) {
-  const movieContainer = document.getElementById(category);
-  movieContainer.innerHTML = '';
-
-  const moviesCategory = movies[category];
-
-  moviesCategory.forEach(movie => {
-    const movieCard = createMovieCard(movie);
-    movieContainer.appendChild(movieCard);
-  });
+function toggleShow(category) {
+  const button = document.querySelector(`button[data-category="${category}"]`);
+  const isShowingAll = button.getAttribute('data-showing-all') === 'true';
+  loadMovies(category, !isShowingAll);
 }
 
 function searchMovie() {
@@ -74,13 +76,17 @@ function searchMovie() {
   }
 }
 
-// Load the first 12 movies for each category
-loadMovies('latestMovies');
-loadMovies('banglaMovies');
-loadMovies('hindiDubbedMovies');
-loadMovies('hollywoodMovies');
-loadMovies('banglaDubbedMovies');
-loadMovies('animeMovies');
+// Load first 12 movies per category initially
+const categories = [
+  'latestMovies',
+  'banglaMovies',
+  'hindiDubbedMovies',
+  'hollywoodMovies',
+  'banglaDubbedMovies',
+  'animeMovies'
+];
 
-// Toggle Menu for mobile
+categories.forEach(category => loadMovies(category, false));
+
+// Toggle menu
 document.getElementById('menuToggle').addEventListener('click', toggleMenu);
