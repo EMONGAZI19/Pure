@@ -207,3 +207,19 @@ header {
 .footer-links a:hover {
   color: #00ccbb;
 }
+
+.footer-links {
+  margin-top: 10px;
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  gap: 10px; /* adds space between links */
+}
+
+.footer-links a {
+  color: #00ffee;
+  text-decoration: none;
+  font-weight: 500;
+  padding: 5px 10px; /* spacing around each link */
+  transition: color 0.3s;
+}
