@@ -1,80 +1,80 @@
-<!DOCTYPE html><html lang="bn">
+<!DOCTYPE html>
+<html lang="bn">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
   <title>My Drama World</title>
-  <link rel="stylesheet" href="style.css">
-  <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+Bengali&display=swap" rel="stylesheet">
-  <script src="https://kit.fontawesome.com/a076d05399.js" crossorigin="anonymous"></script>
+  <link rel="stylesheet" href="style.css" />
 </head>
 <body>
+
+  <!-- Header -->
   <header>
-    <div class="logo">My Drama World</div>
-    <div class="header-icons">
-      <i class="fas fa-search"></i>
-      <i class="fas fa-bars"></i>
+    <a href="#" class="logo">My Drama World</a>
+    <div id="menuToggle" class="menu-icon">&#9776;</div>
+    <nav id="navMenu" class="nav-menu">
+      <a href="#">হোম</a>
+      <a href="#">মুভি রিকুয়েস্ট</a>
+      <a href="#">যোগাযোগ</a>
+      <a href="#">প্রাইভেসি</a>
+      <a href="#">আমাদের সম্পর্কে</a>
+    </nav>
+  </header>
+
+  <!-- Notice Bar -->
+  <div class="notice-bar">
+    <div class="notice-label">নোটিশ:</div>
+    <div class="notice-marquee">
+      <marquee behavior="scroll" direction="left" scrollamount="5">
+        নতুন মুভি প্রতিদিন আপডেট করা হয়! আজকের আপলোড: 'New Korean Drama EP12', 'Hindi Dubbed Thriller'...
+      </marquee>
     </div>
-  </header>  <div class="notice-bar">
-    <span class="notice-label">নোটিশ:</span>
-    <marquee behavior="scroll" direction="left">নতুন মুভি প্রতিদিন আপলোড করা হচ্ছে। সাইট ভিজিট করতে থাকুন।</marquee>
-  </div>  <section class="slider-section">
-    <div class="movie-slider" id="movieSlider">
-      <!-- Movie slides will go here -->
-    </div>
-    <div class="slider-nav">
-      <button onclick="prevSlide()">‹</button>
-      <button onclick="nextSlide()">›</button>
-    </div>
-  </section>  <section class="category-section">
-    <h2>All Categories</h2>
-    <div class="category-list">
-      <button>Latest Movies</button>
-      <button>Bangla Movies</button>
-      <button>Hindi Dubbed</button>
-      <button>Hollywood</button>
-      <button>Bangla Dubbed</button>
-      <button>Anime</button>
-    </div>
-  </section>  <section class="movie-section">
-    <div class="section-header">
-      <h2>Latest Movies</h2>
-      <a href="#">See All</a>
-    </div>
-    <div class="movie-grid" id="latestMovies"></div>
-  </section>  <section class="movie-section">
-    <div class="section-header">
-      <h2>Bangla Movies</h2>
-      <a href="#">See All</a>
-    </div>
-    <div class="movie-grid" id="banglaMovies"></div>
-  </section>  <section class="movie-section">
-    <div class="section-header">
-      <h2>Hindi Dubbed</h2>
-      <a href="#">See All</a>
-    </div>
-    <div class="movie-grid" id="hindiDubbed"></div>
-  </section>  <section class="movie-section">
-    <div class="section-header">
-      <h2>Hollywood Movies</h2>
-      <a href="#">See All</a>
-    </div>
-    <div class="movie-grid" id="hollywoodMovies"></div>
-  </section>  <section class="movie-section">
-    <div class="section-header">
-      <h2>Bangla Dubbed</h2>
-      <a href="#">See All</a>
-    </div>
-    <div class="movie-grid" id="banglaDubbed"></div>
-  </section>  <section class="movie-section">
-    <div class="section-header">
-      <h2>Anime</h2>
-      <a href="#">See All</a>
-    </div>
-    <div class="movie-grid" id="animeMovies"></div>
-  </section>  <section class="about">
-    <h2>About My Drama World</h2>
-    <p>My Drama World হলো একটি মুভি ও নাটক শেয়ারিং সাইট যেখানে আপনি পেয়ে যাবেন সব ধরনের বাংলা, হিন্দি, হলিউড ও ডাবড মুভি।</p>
-  </section>  <footer>
-    &copy; 2025 My Drama World. All rights reserved.
-  </footer>  <script src="script.js"></script></body>
-</html>
+  </div>
+
+  <!-- Search Bar Below the Notice -->
+  <div class="search-container">
+    <input type="text" id="searchInput" class="search-bar" placeholder="মুভি খুঁজুন..."/>
+    <button class="search-btn" onclick="searchMovie()">সার্চ</button>
+  </div>
+
+  <!-- Movie Loader Section -->
+  <div class="movie-section">
+    <h2>Latest Movies</h2>
+    <div id="latestMovies" class="movie-grid"></div>
+    <button class="see-all" onclick="showAll('latestMovies')">See All</button>
+  </div>
+
+  <div class="movie-section">
+    <h2>Bangla Movies</h2>
+    <div id="banglaMovies" class="movie-grid"></div>
+    <button class="see-all" onclick="showAll('banglaMovies')">See All</button>
+  </div>
+
+  <div class="movie-section">
+    <h2>Hindi Dubbed Movies</h2>
+    <div id="hindiDubbedMovies" class="movie-grid"></div>
+    <button class="see-all" onclick="showAll('hindiDubbedMovies')">See All</button>
+  </div>
+
+  <div class="movie-section">
+    <h2>Hollywood Movies</h2>
+    <div id="hollywoodMovies" class="movie-grid"></div>
+    <button class="see-all" onclick="showAll('hollywoodMovies')">See All</button>
+  </div>
+
+  <div class="movie-section">
+    <h2>Bangla Dubbed Movies</h2>
+    <div id="banglaDubbedMovies" class="movie-grid"></div>
+    <button class="see-all" onclick="showAll('banglaDubbedMovies')">See All</button>
+  </div>
+
+  <div class="movie-section">
+    <h2>Anime Movies</h2>
+    <div id="animeMovies" class="movie-grid"></div>
+    <button class="see-all" onclick="showAll('animeMovies')">See All</button>
+  </div>
+
+  <script src="movies.js"></script>
+  <script src="script.js"></script>
+</body>
+      </html>
