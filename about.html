@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="bn">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>About Us - My Drama World</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <!-- Header -->
+  <header>
+    <a href="/" class="logo">My Drama World</a>
+    <div id="menuToggle" class="menu-icon">&#9776;</div>
+    <nav id="navMenu" class="nav-menu">
+      <a href="/">Home</a>
+      <a href="/movie-request.html">Movie Request</a>
+      <a href="/contact.html">Contact</a>
+      <a href="/privacy-policy.html">Privacy Policy</a>
+      <a href="/about.html">About Us</a>
+    </nav>
+  </header>
+
+  <!-- Language Toggle -->
+  <div style="text-align: right; padding: 10px 20px;">
+    <button onclick="setLanguage('bn')">বাংলা</button>
+    <button onclick="setLanguage('en')">English</button>
+  </div>
+
+  <!-- Content -->
+  <main style="padding: 20px; max-width: 800px; margin: auto;">
+    <div id="about-bn" class="lang">
+      <h1 style="color: #00ffee;">আমাদের সম্পর্কে</h1>
+      <p>My Drama World একটি বিনামূল্যে মুভি প্ল্যাটফর্ম যা বিভিন্ন ভাষার ড্রামা, মুভি ও অ্যানিমে ভক্তদের জন্য নির্মিত।</p>
+      <p>আমাদের লক্ষ্য হলো দর্শকদের জন্য একটি সহজ ও ইউজার ফ্রেন্ডলি অভিজ্ঞতা তৈরি করা।</p>
+      <p>যোগাযোগ করুন: <a href="/contact.html">যোগাযোগ পেজ</a></p>
+    </div>
+    <div id="about-en" class="lang" style="display: none;">
+      <h1 style="color: #00ffee;">About Us</h1>
+      <p>My Drama World is a free movie platform built for fans of dramas, movies, and anime in various languages.</p>
+      <p>Our goal is to create a smooth, user-friendly experience for all viewers.</p>
+      <p>Contact us via our <a href="/contact.html">Contact Page</a>.</p>
+    </div>
+  </main>
+
+  <!-- Footer -->
+  <footer>
+    <div class="footer-content">
+      <p>&copy; 2025 My Drama World. All rights reserved.</p>
+    </div>
+  </footer>
+
+  <script src="script.js"></script>
+  <script>
+    function setLanguage(lang) {
+      document.querySelectorAll('.lang').forEach(el => el.style.display = 'none');
+      document.getElementById(`about-${lang}`).style.display = 'block';
+    }
+  </script>
+</body>
+</html>
