@@ -17,7 +17,7 @@
       <a href="/movie-request.html">Movie Request</a>
       <a href="/contact.html">Contact</a>
       <a href="/privacy-policy.html">Privacy Policy</a>
-      <a href="/about.html">Abouy Us</a>
+      <a href="/about.html">About Us</a>
     </nav>
   </header>
 
@@ -37,44 +37,44 @@
     <button class="search-btn" onclick="searchMovie()">সার্চ</button>
   </div>
 
-  <!-- Movie Loader Section -->
+  <!-- Movie Sections -->
   <div class="movie-section">
     <h2>Latest Movies</h2>
     <div id="latestMovies" class="movie-grid"></div>
-    <button class="see-all" onclick="showAll('latestMovies')">See All</button>
+    <button class="see-all" data-category="latestMovies" data-showing-all="false" onclick="toggleShow('latestMovies')">See All</button>
   </div>
 
   <div class="movie-section">
     <h2>Bangla Movies</h2>
     <div id="banglaMovies" class="movie-grid"></div>
-    <button class="see-all" onclick="showAll('banglaMovies')">See All</button>
+    <button class="see-all" data-category="banglaMovies" data-showing-all="false" onclick="toggleShow('banglaMovies')">See All</button>
   </div>
 
   <div class="movie-section">
     <h2>Hindi Dubbed Movies</h2>
     <div id="hindiDubbedMovies" class="movie-grid"></div>
-    <button class="see-all" onclick="showAll('hindiDubbedMovies')">See All</button>
+    <button class="see-all" data-category="hindiDubbedMovies" data-showing-all="false" onclick="toggleShow('hindiDubbedMovies')">See All</button>
   </div>
 
   <div class="movie-section">
     <h2>Hollywood Movies</h2>
     <div id="hollywoodMovies" class="movie-grid"></div>
-    <button class="see-all" onclick="showAll('hollywoodMovies')">See All</button>
+    <button class="see-all" data-category="hollywoodMovies" data-showing-all="false" onclick="toggleShow('hollywoodMovies')">See All</button>
   </div>
 
   <div class="movie-section">
     <h2>Bangla Dubbed Movies</h2>
     <div id="banglaDubbedMovies" class="movie-grid"></div>
-    <button class="see-all" onclick="showAll('banglaDubbedMovies')">See All</button>
+    <button class="see-all" data-category="banglaDubbedMovies" data-showing-all="false" onclick="toggleShow('banglaDubbedMovies')">See All</button>
   </div>
 
   <div class="movie-section">
     <h2>Anime Movies</h2>
     <div id="animeMovies" class="movie-grid"></div>
-    <button class="see-all" onclick="showAll('animeMovies')">See All</button>
+    <button class="see-all" data-category="animeMovies" data-showing-all="false" onclick="toggleShow('animeMovies')">See All</button>
   </div>
 
   <script src="movies.js"></script>
   <script src="script.js"></script>
 </body>
-      </html>
+</html>
