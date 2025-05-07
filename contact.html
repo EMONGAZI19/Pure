@@ -1,0 +1,38 @@
+<!-- Replace main section in contact.html like below -->
+
+<!-- Language Toggle -->
+<div style="text-align: right; padding: 10px 20px;">
+  <button onclick="setLanguage('bn')">বাংলা</button>
+  <button onclick="setLanguage('en')">English</button>
+</div>
+
+<main style="padding: 20px; max-width: 800px; margin: auto;">
+  <div id="contact-bn" class="lang">
+    <h1 style="color: #00ffee;">যোগাযোগ করুন</h1>
+    <p>আপনার যেকোনো প্রশ্ন, অভিযোগ বা মতামত আমাদের জানাতে নিচের ফর্মটি ব্যবহার করুন:</p>
+    <form>
+      <input type="text" placeholder="আপনার নাম" required />
+      <input type="email" placeholder="আপনার ইমেইল" required />
+      <textarea rows="5" placeholder="বার্তা লিখুন..." required></textarea>
+      <button type="submit">পাঠান</button>
+    </form>
+  </div>
+
+  <div id="contact-en" class="lang" style="display: none;">
+    <h1 style="color: #00ffee;">Contact Us</h1>
+    <p>If you have any questions, suggestions or issues, use the form below to reach us:</p>
+    <form>
+      <input type="text" placeholder="Your Name" required />
+      <input type="email" placeholder="Your Email" required />
+      <textarea rows="5" placeholder="Write your message..." required></textarea>
+      <button type="submit">Send</button>
+    </form>
+  </div>
+</main>
+
+<script>
+  function setLanguage(lang) {
+    document.querySelectorAll('.lang').forEach(el => el.style.display = 'none');
+    document.getElementById(`contact-${lang}`).style.display = 'block';
+  }
+</script>
