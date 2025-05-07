@@ -1,0 +1,199 @@
+{
+  "latestMovies": [
+    {
+      "title": "Latest Movie 1",
+      "img": "https://m.media-amazon.com/images/M/MV5BNDY1ZWQyNjMtYTJjMC00ZjM3LTk3MWItMTcwNjg4ODZmODZhXkEyXkFqcGc@.*V1_QL75_UX704*.jpg"
+    },
+    {
+      "title": "Latest Movie 2",
+      "img": "https://m.media-amazon.com/images/M/MV5BNDY1ZWQyNjMtYTJjMC00ZjM3LTk3MWItMTcwNjg4ODZmODZhXkEyXkFqcGc@.*V1_QL75_UX704*.jpg"
+    },
+    {
+      "title": "Latest Movie 3",
+      "img": "https://m.media-amazon.com/images/M/MV5BNDY1ZWQyNjMtYTJjMC00ZjM3LTk3MWItMTcwNjg4ODZmODZhXkEyXkFqcGc@.*V1_QL75_UX704*.jpg"
+    },
+    {
+      "title": "Latest Movie 4",
+      "img": "https://m.media-amazon.com/images/M/MV5BNDY1ZWQyNjMtYTJjMC00ZjM3LTk3MWItMTcwNjg4ODZmODZhXkEyXkFqcGc@.*V1_QL75_UX704*.jpg"
+    },
+    {
+      "title": "Latest Movie 5",
+      "img": "https://m.media-amazon.com/images/M/MV5BNDY1ZWQyNjMtYTJjMC00ZjM3LTk3MWItMTcwNjg4ODZmODZhXkEyXkFqcGc@.*V1_QL75_UX704*.jpg"
+    },
+    {
+      "title": "Latest Movie 6",
+      "img": "https://m.media-amazon.com/images/M/MV5BNDY1ZWQyNjMtYTJjMC00ZjM3LTk3MWItMTcwNjg4ODZmODZhXkEyXkFqcGc@.*V1_QL75_UX704*.jpg"
+    },
+    {
+      "title": "Latest Movie 7",
+      "img": "https://m.media-amazon.com/images/M/MV5BNDY1ZWQyNjMtYTJjMC00ZjM3LTk3MWItMTcwNjg4ODZmODZhXkEyXkFqcGc@.*V1_QL75_UX704*.jpg"
+    },
+    {
+      "title": "Latest Movie 8",
+      "img": "https://m.media-amazon.com/images/M/MV5BNDY1ZWQyNjMtYTJjMC00ZjM3LTk3MWItMTcwNjg4ODZmODZhXkEyXkFqcGc@.*V1_QL75_UX704*.jpg"
+    },
+    {
+      "title": "Latest Movie 9",
+      "img": "https://m.media-amazon.com/images/M/MV5BNDY1ZWQyNjMtYTJjMC00ZjM3LTk3MWItMTcwNjg4ODZmODZhXkEyXkFqcGc@.*V1_QL75_UX704*.jpg"
+    },
+    {
+      "title": "Latest Movie 10",
+      "img": "https://m.media-amazon.com/images/M/MV5BNDY1ZWQyNjMtYTJjMC00ZjM3LTk3MWItMTcwNjg4ODZmODZhXkEyXkFqcGc@.*V1_QL75_UX704*.jpg"
+    },
+    {
+      "title": "Latest Movie 11",
+      "img": "https://m.media-amazon.com/images/M/MV5BNDY1ZWQyNjMtYTJjMC00ZjM3LTk3MWItMTcwNjg4ODZmODZhXkEyXkFqcGc@.*V1_QL75_UX704*.jpg"
+    },
+    {
+      "title": "Latest Movie 12",
+      "img": "https://m.media-amazon.com/images/M/MV5BNDY1ZWQyNjMtYTJjMC00ZjM3LTk3MWItMTcwNjg4ODZmODZhXkEyXkFqcGc@.*V1_QL75_UX704*.jpg"
+    }
+  ],
+  "banglaMovies": [
+    {
+      "title": "Bangla Movie 1",
+      "img": "https://m.media-amazon.com/images/M/MV5BNDY1ZWQyNjMtYTJjMC00ZjM3LTk3MWItMTcwNjg4ODZmODZhXkEyXkFqcGc@.*V1_QL75_UX704*.jpg"
+    },
+    {
+      "title": "Bangla Movie 2",
+      "img": "https://m.media-amazon.com/images/M/MV5BNDY1ZWQyNjMtYTJjMC00ZjM3LTk3MWItMTcwNjg4ODZmODZhXkEyXkFqcGc@.*V1_QL75_UX704*.jpg"
+    },
+    {
+      "title": "Bangla Movie 3",
+      "img": "https://m.media-amazon.com/images/M/MV5BNDY1ZWQyNjMtYTJjMC00ZjM3LTk3MWItMTcwNjg4ODZmODZhXkEyXkFqcGc@.*V1_QL75_UX704*.jpg"
+    },
+    {
+      "title": "Bangla Movie 4",
+      "img": "https://m.media-amazon.com/images/M/MV5BNDY1ZWQyNjMtYTJjMC00ZjM3LTk3MWItMTcwNjg4ODZmODZhXkEyXkFqcGc@.*V1_QL75_UX704*.jpg"
+    },
+    {
+      "title": "Bangla Movie 5",
+      "img": "https://m.media-amazon.com/images/M/MV5BNDY1ZWQyNjMtYTJjMC00ZjM3LTk3MWItMTcwNjg4ODZmODZhXkEyXkFqcGc@.*V1_QL75_UX704*.jpg"
+    },
+    {
+      "title": "Bangla Movie 6",
+      "img": "https://m.media-amazon.com/images/M/MV5BNDY1ZWQyNjMtYTJjMC00ZjM3LTk3MWItMTcwNjg4ODZmODZhXkEyXkFqcGc@.*V1_QL75_UX704*.jpg"
+    },
+    {
+      "title": "Bangla Movie 7",
+      "img": "https://m.media-amazon.com/images/M/MV5BNDY1ZWQyNjMtYTJjMC00ZjM3LTk3MWItMTcwNjg4ODZmODZhXkEyXkFqcGc@.*V1_QL75_UX704*.jpg"
+    },
+    {
+      "title": "Bangla Movie 8",
+      "img": "https://m.media-amazon.com/images/M/MV5BNDY1ZWQyNjMtYTJjMC00ZjM3LTk3MWItMTcwNjg4ODZmODZhXkEyXkFqcGc@.*V1_QL75_UX704*.jpg"
+    },
+    {
+      "title": "Bangla Movie 9",
+      "img": "https://m.media-amazon.com/images/M/MV5BNDY1ZWQyNjMtYTJjMC00ZjM3LTk3MWItMTcwNjg4ODZmODZhXkEyXkFqcGc@.*V1_QL75_UX704*.jpg"
+    },
+    {
+      "title": "Bangla Movie 10",
+      "img": "https://m.media-amazon.com/images/M/MV5BNDY1ZWQyNjMtYTJjMC00ZjM3LTk3MWItMTcwNjg4ODZmODZhXkEyXkFqcGc@.*V1_QL75_UX704*.jpg"
+    },
+    {
+      "title": "Bangla Movie 11",
+      "img": "https://m.media-amazon.com/images/M/MV5BNDY1ZWQyNjMtYTJjMC00ZjM3LTk3MWItMTcwNjg4ODZmODZhXkEyXkFqcGc@.*V1_QL75_UX704*.jpg"
+    },
+    {
+      "title": "Bangla Movie 12",
+      "img": "https://m.media-amazon.com/images/M/MV5BNDY1ZWQyNjMtYTJjMC00ZjM3LTk3MWItMTcwNjg4ODZmODZhXkEyXkFqcGc@.*V1_QL75_UX704*.jpg"
+    }
+  ],
+  "hindiDubbed": [
+    {
+      "title": "Hindi Dubbed Movie 1",
+      "img": "https://m.media-amazon.com/images/M/MV5BNDY1ZWQyNjMtYTJjMC00ZjM3LTk3MWItMTcwNjg4ODZmODZhXkEyXkFqcGc@.*V1_QL75_UX704*.jpg"
+    },
+    {
+      "title": "Hindi Dubbed Movie 2",
+      "img": "https://m.media-amazon.com/images/M/MV5BNDY1ZWQyNjMtYTJjMC00ZjM3LTk3MWItMTcwNjg4ODZmODZhXkEyXkFqcGc@.*V1_QL75_UX704*.jpg"
+    },
+    {
+      "title": "Hindi Dubbed Movie 3",
+      "img": "https://m.media-amazon.com/images/M/MV5BNDY1ZWQyNjMtYTJjMC00ZjM3LTk3MWItMTcwNjg4ODZmODZhXkEyXkFqcGc@.*V1_QL75_UX704*.jpg"
+    },
+    {
+      "title": "Hindi Dubbed Movie 4",
+      "img": "https://m.media-amazon.com/images/M/MV5BNDY1ZWQyNjMtYTJjMC00ZjM3LTk3MWItMTcwNjg4ODZmODZhXkEyXkFqcGc@.*V1_QL75_UX704*.jpg"
+    },
+    {
+      "title": "Hindi Dubbed Movie 5",
+      "img": "https://m.media-amazon.com/images/M/MV5BNDY1ZWQyNjMtYTJjMC00ZjM3LTk3MWItMTcwNjg4ODZmODZhXkEyXkFqcGc@.*V1_QL75_UX704*.jpg"
+    },
+    {
+      "title": "Hindi Dubbed Movie 6",
+      "img": "https://m.media-amazon.com/images/M/MV5BNDY1ZWQyNjMtYTJjMC00ZjM3LTk3MWItMTcwNjg4ODZmODZhXkEyXkFqcGc@.*V1_QL75_UX704*.jpg"
+    },
+    {
+      "title": "Hindi Dubbed Movie 7",
+      "img": "https://m.media-amazon.com/images/M/MV5BNDY1ZWQyNjMtYTJjMC00ZjM3LTk3MWItMTcwNjg4ODZmODZhXkEyXkFqcGc@.*V1_QL75_UX704*.jpg"
+    },
+    {
+      "title": "Hindi Dubbed Movie 8",
+      "img": "https://m.media-amazon.com/images/M/MV5BNDY1ZWQyNjMtYTJjMC00ZjM3LTk3MWItMTcwNjg4ODZmODZhXkEyXkFqcGc@.*V1_QL75_UX704*.jpg"
+    },
+    {
+      "title": "Hindi Dubbed Movie 9",
+      "img": "https://m.media-amazon.com/images/M/MV5BNDY1ZWQyNjMtYTJjMC00ZjM3LTk3MWItMTcwNjg4ODZmODZhXkEyXkFqcGc@.*V1_QL75_UX704*.jpg"
+    },
+    {
+      "title": "Hindi Dubbed Movie 10",
+      "img": "https://m.media-amazon.com/images/M/MV5BNDY1ZWQyNjMtYTJjMC00ZjM3LTk3MWItMTcwNjg4ODZmODZhXkEyXkFqcGc@.*V1_QL75_UX704*.jpg"
+    },
+    {
+      "title": "Hindi Dubbed Movie 11",
+      "img": "https://m.media-amazon.com/images/M/MV5BNDY1ZWQyNjMtYTJjMC00ZjM3LTk3MWItMTcwNjg4ODZmODZhXkEyXkFqcGc@.*V1_QL75_UX704*.jpg"
+    },
+    {
+      "title": "Hindi Dubbed Movie 12",
+      "img": "https://m.media-amazon.com/images/M/MV5BNDY1ZWQyNjMtYTJjMC00ZjM3LTk3MWItMTcwNjg4ODZmODZhXkEyXkFqcGc@.*V1_QL75_UX704*.jpg"
+    }
+  ],
+  "hollywoodMovies": [
+    {
+      "title": "Hollywood Movie 1",
+      "img": "https://m.media-amazon.com/images/M/MV5BNDY1ZWQyNjMtYTJjMC00ZjM3LTk3MWItMTcwNjg4ODZmODZhXkEyXkFqcGc@.*V1_QL75_UX704*.jpg"
+    },
+    {
+      "title": "Hollywood Movie 2",
+      "img": "https://m.media-amazon.com/images/M/MV5BNDY1ZWQyNjMtYTJjMC00ZjM3LTk3MWItMTcwNjg4ODZmODZhXkEyXkFqcGc@.*V1_QL75_UX704*.jpg"
+    },
+    {
+      "title": "Hollywood Movie 3",
+      "img": "https://m.media-amazon.com/images/M/MV5BNDY1ZWQyNjMtYTJjMC00ZjM3LTk3MWItMTcwNjg4ODZmODZhXkEyXkFqcGc@.*V1_QL75_UX704*.jpg"
+    },
+    {
+      "title": "Hollywood Movie 4",
+      "img": "https://m.media-amazon.com/images/M/MV5BNDY1ZWQyNjMtYTJjMC00ZjM3LTk3MWItMTcwNjg4ODZmODZhXkEyXkFqcGc@.*V1_QL75_UX704*.jpg"
+    },
+    {
+      "title": "Hollywood Movie 5",
+      "img": "https://m.media-amazon.com/images/M/MV5BNDY1ZWQyNjMtYTJjMC00ZjM3LTk3MWItMTcwNjg4ODZmODZhXkEyXkFqcGc@.*V1_QL75_UX704*.jpg"
+    },
+    {
+      "title": "Hollywood Movie 6",
+      "img": "https://m.media-amazon.com/images/M/MV5BNDY1ZWQyNjMtYTJjMC00ZjM3LTk3MWItMTcwNjg4ODZmODZhXkEyXkFqcGc@.*V1_QL75_UX704*.jpg"
+    },
+    {
+      "title": "Hollywood Movie 7",
+      "img": "https://m.media-amazon.com/images/M/MV5BNDY1ZWQyNjMtYTJjMC00ZjM3LTk3MWItMTcwNjg4ODZmODZhXkEyXkFqcGc@.*V1_QL75_UX704*.jpg"
+    },
+    {
+      "title": "Hollywood Movie 8",
+      "img": "https://m.media-amazon.com/images/M/MV5BNDY1ZWQyNjMtYTJjMC00ZjM3LTk3MWItMTcwNjg4ODZmODZhXkEyXkFqcGc@.*V1_QL75_UX704*.jpg"
+    },
+    {
+      "title": "Hollywood Movie 9",
+      "img": "https://m.media-amazon.com/images/M/MV5BNDY1ZWQyNjMtYTJjMC00ZjM3LTk3MWItMTcwNjg4ODZmODZhXkEyXkFqcGc@.*V1_QL75_UX704*.jpg"
+    },
+    {
+      "title": "Hollywood Movie 10",
+      "img": "https://m.media-amazon.com/images/M/MV5BNDY1ZWQyNjMtYTJjMC00ZjM3LTk3MWItMTcwNjg4ODZmODZhXkEyXkFqcGc@.*V1_QL75_UX704*.jpg"
+    },
+    {
+      "title": "Hollywood Movie 11",
+      "img": "https://m.media-amazon.com/images/M/MV5BNDY1ZWQyNjMtYTJjMC00ZjM3LTk3MWItMTcwNjg4ODZmODZhXkEyXkFqcGc@.*V1_QL75_UX704*.jpg"
+    },
+    {
+      "title": "Hollywood Movie 12",
+      "img": "https://m.media-amazon.com/images/M/MV5BNDY1ZWQyNjMtYTJjMC00ZjM3LTk3MWItMTcwNjg4ODZmODZhXkEyXkFqcGc@.*V1_QL75_UX704*.jpg"
