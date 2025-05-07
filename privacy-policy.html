@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html lang="bn">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Privacy Policy - My Drama World</title>
+  <link rel="stylesheet" href="style.css" />
+  <style>
+    .language-switch {
+      display: flex;
+      justify-content: center;
+      gap: 10px;
+      margin: 20px 0;
+    }
+
+    .language-switch button {
+      padding: 8px 16px;
+      background-color: #00ffee;
+      border: none;
+      border-radius: 5px;
+      cursor: pointer;
+      font-weight: bold;
+      color: #000;
+    }
+
+    .language-switch button.active {
+      background-color: #00ccbb;
+    }
+
+    .policy-content {
+      max-width: 900px;
+      margin: 0 auto;
+      padding: 20px;
+      line-height: 1.6;
+    }
+
+    .policy-section {
+      display: none;
+    }
+
+    .policy-section.active {
+      display: block;
+    }
+
+    footer {
+      background-color: #000;
+      color: #aaa;
+      text-align: center;
+      padding: 15px;
+      margin-top: 40px;
+      border-top: 1px solid #333;
+      font-size: 0.9rem;
+    }
+  </style>
+</head>
+<body>
+
+  <!-- Header -->
+  <header>
+    <a href="/" class="logo">My Drama World</a>
+    <div id="menuToggle" class="menu-icon">&#9776;</div>
+    <nav id="navMenu" class="nav-menu">
+      <a href="/home.html">Home</a>
+      <a href="/movie-request.html">Movie Request</a>
+      <a href="/contact.html">Contact</a>
+      <a href="/privacy-policy.html" class="active">Privacy Policy</a>
+      <a href="/about.html">About Us</a>
+    </nav>
+  </header>
+
+  <!-- Language Switcher -->
+  <div class="language-switch">
+    <button id="btn-bn" class="active">বাংলা</button>
+    <button id="btn-en">English</button>
+  </div>
+
+  <!-- Policy Content -->
+  <div class="policy-content">
+    <!-- Bengali -->
+    <div id="policy-bn" class="policy-section active">
+      <h2>প্রাইভেসি পলিসি</h2>
+      <p>আপনার গোপনীয়তা আমাদের জন্য গুরুত্বপূর্ণ। আমরা শুধুমাত্র ব্যবহারকারীর অভিজ্ঞতা উন্নত করার জন্য মৌলিক ডেটা সংগ্রহ করি। আমরা তৃতীয় পক্ষের সাথে আপনার তথ্য শেয়ার করি না।</p>
+      <p>আমরা কুকিজ ব্যবহার করে আপনার পছন্দ সংরক্ষণ করি এবং সাইটটি আরও কার্যকর করতে সহায়তা করি।</p>
+      <p>এই ওয়েবসাইটটি শুধুমাত্র বিনোদনের উদ্দেশ্যে ব্যবহৃত হয়। আপনি যদি আমাদের নীতিমালার সাথে একমত না হন, অনুগ্রহ করে সাইটটি ব্যবহার করা থেকে বিরত থাকুন।</p>
+    </div>
+
+    <!-- English -->
+    <div id="policy-en" class="policy-section">
+      <h2>Privacy Policy</h2>
+      <p>Your privacy is important to us. We collect basic data only to improve user experience. We do not share your information with third parties.</p>
+      <p>We use cookies to save your preferences and help improve site functionality.</p>
+      <p>This website is intended solely for entertainment purposes. If you do not agree with our policy, please refrain from using the site.</p>
+    </div>
+  </div>
+
+  <!-- Footer -->
+  <footer>
+    &copy; 2025 My Drama World. All rights reserved. | <a href="/privacy-policy.html" style="color:#00ffee;">Privacy Policy</a>
+  </footer>
+
+  <script>
+    const btnBn = document.getElementById('btn-bn');
+    const btnEn = document.getElementById('btn-en');
+    const policyBn = document.getElementById('policy-bn');
+    const policyEn = document.getElementById('policy-en');
+
+    btnBn.addEventListener('click', () => {
+      policyBn.classList.add('active');
+      policyEn.classList.remove('active');
+      btnBn.classList.add('active');
+      btnEn.classList.remove('active');
+    });
+
+    btnEn.addEventListener('click', () => {
+      policyBn.classList.remove('active');
+      policyEn.classList.add('active');
+      btnBn.classList.remove('active');
+      btnEn.classList.add('active');
+    });
+  </script>
+</body>
+</html>
