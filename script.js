@@ -3,8 +3,17 @@ document.addEventListener("DOMContentLoaded", function () {
   const navMenu = document.getElementById('navMenu');
   const noResultMessage = document.getElementById('noResultMessage');
 
-  menuToggle.addEventListener('click', () => {
+  // Toggle menu on menu icon click
+  menuToggle.addEventListener('click', (event) => {
     navMenu.classList.toggle('active');
+    event.stopPropagation(); // Prevent event from bubbling up to the document
+  });
+
+  // Close menu if clicked outside the menu
+  document.addEventListener('mousedown', (event) => {
+    if (!navMenu.contains(event.target) && !menuToggle.contains(event.target)) {
+      navMenu.classList.remove('active');
+    }
   });
 
   function createMovieCard(movie) {
