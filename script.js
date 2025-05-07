@@ -1,15 +1,14 @@
 document.addEventListener("DOMContentLoaded", function () {
   const menuToggle = document.getElementById('menuToggle');
   const navMenu = document.getElementById('navMenu');
-  const noResultMessage = document.getElementById('noResultMessage');
 
   // Toggle menu on menu icon click
   menuToggle.addEventListener('click', (event) => {
     navMenu.classList.toggle('active');
-    event.stopPropagation(); // Prevent event from bubbling up to the document
+    event.stopPropagation(); // Prevent event from bubbling up
   });
 
-  // Close menu if clicked outside the menu
+  // Close menu if clicked outside
   document.addEventListener('mousedown', (event) => {
     if (!navMenu.contains(event.target) && !menuToggle.contains(event.target)) {
       navMenu.classList.remove('active');
@@ -67,23 +66,47 @@ document.addEventListener("DOMContentLoaded", function () {
   window.searchMovie = function () {
     const searchQuery = document.getElementById('searchInput').value.toLowerCase();
     const movieCards = document.querySelectorAll('.movie-card');
+    const movieSections = document.querySelectorAll('.movie-section');
 
     let found = false;
+
+    if (searchQuery.trim() === "") {
+      // যদি কিছু লেখা না থাকে, সব সেকশন দেখাও
+      movieSections.forEach(section => section.style.display = '');
+      movieCards.forEach(card => card.style.display = '');
+      document.getElementById('noResultMessage')?.remove();
+      return;
+    }
+
+    // সব সেকশন লুকাও
+    movieSections.forEach(section => section.style.display = 'none');
 
     movieCards.forEach(card => {
       const title = card.querySelector('h3').textContent.toLowerCase();
       if (title.includes(searchQuery)) {
         card.style.display = '';
+        const section = card.closest('.movie-section');
+        if (section) section.style.display = '';
         found = true;
       } else {
         card.style.display = 'none';
       }
     });
 
-    if (!found && searchQuery !== "") {
-      noResultMessage.style.display = 'block';
+    // ফলাফল না পেলে মেসেজ দেখাও
+    let noResultMessage = document.getElementById('noResultMessage');
+    if (!found) {
+      if (!noResultMessage) {
+        noResultMessage = document.createElement('div');
+        noResultMessage.id = 'noResultMessage';
+        noResultMessage.style.textAlign = 'center';
+        noResultMessage.style.color = '#ff4444';
+        noResultMessage.style.margin = '20px';
+        noResultMessage.textContent = 'এই মুভি টি নেই, রিকুয়েস্ট বাটন থেকে রিকুয়েস্ট করুন';
+        document.body.appendChild(noResultMessage);
+      }
     } else {
-      noResultMessage.style.display = 'none';
+      noResultMessage?.remove();
     }
   }
 
