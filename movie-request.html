@@ -1,141 +1,69 @@
-<!DOCTYPE html>
-<html lang="bn">
+<!DOCTYPE html><html lang="bn">
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-  <title>Movie Request</title>
-  <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+Bengali&display=swap" rel="stylesheet">
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Movie Request - My Drama World</title>
   <link rel="stylesheet" href="style.css">
+  <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+Bengali&display=swap" rel="stylesheet">
   <style>
     body {
       font-family: 'Noto Sans Bengali', sans-serif;
-      background: #f5f5f5;
       margin: 0;
       padding: 0;
-    }
+      background: #121212;
+      color: #fff;
+    }.request-form {
+  max-width: 600px;
+  margin: 80px auto 40px;
+  background: #1e1e1e;
+  padding: 30px;
+  border-radius: 20px;
+  box-shadow: 0 0 15px rgba(0,0,0,0.3);
+}
 
-    /* Header styles */
-    header {
-      background: #333;
-      color: white;
-      padding: 15px 20px;
-      display: flex;
-      align-items: center;
-      justify-content: space-between;
-    }
+.request-form h2 {
+  text-align: center;
+  margin-bottom: 25px;
+  color: #fcb69f;
+}
 
-    .logo {
-      color: white;
-      text-decoration: none;
-      font-size: 20px;
-      font-weight: bold;
-    }
+.request-form input, .request-form textarea {
+  width: 100%;
+  padding: 12px;
+  margin-bottom: 15px;
+  border-radius: 10px;
+  border: none;
+  font-size: 16px;
+  background-color: #2c2c2c;
+  color: #fff;
+}
 
-    .menu-icon {
-      font-size: 24px;
-      cursor: pointer;
-      user-select: none;
-    }
+.request-form button {
+  width: 100%;
+  padding: 12px;
+  background: #fcb69f;
+  color: #121212;
+  border: none;
+  border-radius: 30px;
+  font-size: 16px;
+  cursor: pointer;
+  font-weight: bold;
+}
 
-    .nav-menu {
-      display: none;
-      flex-direction: column;
-      background-color: #444;
-      position: absolute;
-      top: 60px;
-      right: 20px;
-      border-radius: 10px;
-      overflow: hidden;
-      z-index: 100;
-    }
+.request-form button:hover {
+  background: #ff9d7d;
+}
 
-    .nav-menu.active {
-      display: flex;
-    }
+.request-msg {
+  text-align: center;
+  font-weight: bold;
+  margin-top: 10px;
+}
 
-    .nav-menu a {
-      color: white;
-      padding: 10px 20px;
-      text-decoration: none;
-      border-bottom: 1px solid #555;
-    }
-
-    .nav-menu a:hover {
-      background-color: #555;
-    }
-
-    /* Request Form */
-    .request-form {
-      max-width: 600px;
-      margin: 40px auto;
-      background: linear-gradient(to right, #ffecd2, #fcb69f);
-      padding: 30px;
-      border-radius: 20px;
-      box-shadow: 0 0 20px rgba(0,0,0,0.1);
-    }
-
-    .request-form h2 {
-      text-align: center;
-      margin-bottom: 25px;
-      color: #444;
-    }
-
-    .request-form input,
-    .request-form textarea {
-      width: 100%;
-      padding: 12px;
-      margin-bottom: 15px;
-      border-radius: 10px;
-      border: none;
-      font-size: 16px;
-    }
-
-    .request-form button {
-      width: 100%;
-      padding: 12px;
-      background: #6C63FF;
-      color: white;
-      border: none;
-      border-radius: 30px;
-      font-size: 16px;
-      cursor: pointer;
-    }
-
-    .request-form button:hover {
-      background: #5146d8;
-    }
-
-    .request-msg {
-      text-align: center;
-      font-weight: bold;
-      margin-top: 10px;
-    }
-
-    /* Footer */
-    footer {
-      background: #333;
-      color: white;
-      text-align: center;
-      padding: 20px;
-      margin-top: 40px;
-    }
-
-    footer a {
-      color: #ccc;
-      margin: 0 10px;
-      text-decoration: none;
-    }
-
-    footer a:hover {
-      color: white;
-    }
   </style>
 </head>
-<body>
-
-  <!-- Header -->
-  <header>
-    <a href="/" class="logo">My Drama World</a>
+<body>  <!-- Header -->  <header>
+    <a href="#" class="logo">My Drama World</a>
     <div id="menuToggle" class="menu-icon">&#9776;</div>
     <nav id="navMenu" class="nav-menu">
       <a href="/home.html">Home</a>
@@ -143,12 +71,8 @@
       <a href="/contact.html">Contact</a>
       <a href="/privacy-policy.html">Privacy Policy</a>
       <a href="/about.html">About Us</a>
-      <a href="/terms.html">Terms & Conditions</a>
     </nav>
-  </header>
-
-  <!-- Request Form -->
-  <div class="request-form">
+  </header>  <!-- Request Form -->  <div class="request-form">
     <h2>Movie / Drama Request</h2>
     <form id="movie-request-form">
       <input type="text" name="user_name" placeholder="Your Name" required />
@@ -159,50 +83,44 @@
       <button type="submit">Submit Request</button>
       <div class="request-msg" id="result-message"></div>
     </form>
-  </div>
-
-  <!-- Footer -->
-  <footer>
-    &copy; 2025 My Drama World | 
-    <a href="/privacy-policy.html">Privacy Policy</a> |
-    <a href="/about.html">About Us</a> |
-    <a href="/terms.html">Terms & Conditions</a>
-  </footer>
-
-  <!-- EmailJS -->
-  <script src="https://cdn.jsdelivr.net/npm/@emailjs/browser@3/dist/email.min.js"></script>
-  <script>
+  </div>  <!-- Footer -->  <footer class="footer">
+    <div class="footer-links">
+      <a href="/privacy-policy.html">Privacy Policy</a>
+      <a href="/contact.html">Contact</a>
+      <a href="/about.html">About Us</a>
+    </div>
+    <p>&copy; 2025 My Drama World. All rights reserved.</p>
+  </footer>  <!-- EmailJS -->  <script src="https://cdn.jsdelivr.net/npm/@emailjs/browser@3/dist/email.min.js"></script>  <script>
     (function() {
       emailjs.init("x5OHkbIpVsvztciEQ");
     })();
 
     document.getElementById("movie-request-form").addEventListener("submit", function(e) {
       e.preventDefault();
+
       emailjs.sendForm('service_2s4nkks', 'template_13qwgce', this)
         .then(function(response) {
           document.getElementById("result-message").innerText = "Your request has been sent successfully!";
-          document.getElementById("result-message").style.color = "green";
+          document.getElementById("result-message").style.color = "lightgreen";
           document.getElementById("movie-request-form").reset();
         }, function(error) {
           document.getElementById("result-message").innerText = "Something went wrong! Please try again.";
           document.getElementById("result-message").style.color = "red";
         });
     });
-
-    // Toggle menu
-    document.getElementById("menuToggle").addEventListener("click", function(e) {
-      document.getElementById("navMenu").classList.toggle("active");
-      e.stopPropagation();
+  </script>  <script>
+    // Menu toggle
+    document.getElementById('menuToggle').addEventListener('click', function(event) {
+      document.getElementById('navMenu').classList.toggle('active');
+      event.stopPropagation();
     });
 
-    document.addEventListener("click", function(e) {
-      const navMenu = document.getElementById("navMenu");
-      const menuToggle = document.getElementById("menuToggle");
-      if (!navMenu.contains(e.target) && !menuToggle.contains(e.target)) {
-        navMenu.classList.remove("active");
+    document.addEventListener('mousedown', function(event) {
+      const nav = document.getElementById('navMenu');
+      const toggle = document.getElementById('menuToggle');
+      if (!nav.contains(event.target) && !toggle.contains(event.target)) {
+        nav.classList.remove('active');
       }
     });
-  </script>
-
-</body>
+  </script></body>
 </html>
