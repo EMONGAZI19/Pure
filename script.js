@@ -117,13 +117,22 @@ document.addEventListener("DOMContentLoaded", function () {
     }
   }
 
-  // Fix: use keydown for better browser support
+  // Optional: fallback Enter key support (already handled by form below)
   searchInput.addEventListener('keydown', function (e) {
     if (e.key === 'Enter') {
       e.preventDefault();
       searchMovie();
     }
   });
+
+  // NEW: form submission trigger
+  const searchForm = document.getElementById('searchForm');
+  if (searchForm) {
+    searchForm.addEventListener('submit', function (e) {
+      e.preventDefault();
+      searchMovie();
+    });
+  }
 
   const categories = [
     'latestMovies',
