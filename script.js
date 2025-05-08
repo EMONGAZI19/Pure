@@ -1,7 +1,7 @@
 document.addEventListener("DOMContentLoaded", function () {
   const menuToggle = document.getElementById('menuToggle');
   const navMenu = document.getElementById('navMenu');
-  const searchInput = document.getElementById('searchInput');
+  const searchInput = document.getElementById('searchInput'); // এখন ঠিক জায়গায় আছে
 
   // Toggle menu
   menuToggle.addEventListener('click', (event) => {
