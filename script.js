@@ -60,6 +60,7 @@ document.addEventListener("DOMContentLoaded", function () {
     }
   }
 
+  // Toggle Show All / Show Less
   window.toggleShow = function (category) {
     const button = document.querySelector(`button[data-category="${category}"]`);
     const isShowingAll = button.getAttribute('data-showing-all') === 'true';
@@ -108,11 +109,9 @@ document.addEventListener("DOMContentLoaded", function () {
       resultSection.appendChild(resultGrid);
       document.body.insertBefore(resultSection, document.querySelector('footer'));
     } else {
-      const noResult = document.createElement('div');
+      const noResult = document.createElement('a');
       noResult.id = 'noResultMessage';
-      noResult.style.textAlign = 'center';
-      noResult.style.color = '#ff4444';
-      noResult.style.margin = '20px';
+      noResult.href = 'request.html';
       noResult.textContent = 'এই মুভি টি নেই, রিকুয়েস্ট বাটন থেকে রিকুয়েস্ট করুন';
       document.body.appendChild(noResult);
     }
