@@ -1,78 +1,104 @@
-<!DOCTYPE html><html lang="bn">
+<!DOCTYPE html>
+<html lang="bn">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
   <title>Movie Request - My Drama World</title>
-  <link rel="stylesheet" href="style.css">
+  <link rel="stylesheet" href="style.css" />
   <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+Bengali&display=swap" rel="stylesheet">
   <style>
     body {
       font-family: 'Noto Sans Bengali', sans-serif;
-      margin: 0;
-      padding: 0;
-      background: #121212;
+      background-color: #0d0d0d;
       color: #fff;
-    }.request-form {
-  max-width: 600px;
-  margin: 80px auto 40px;
-  background: #1e1e1e;
-  padding: 30px;
-  border-radius: 20px;
-  box-shadow: 0 0 15px rgba(0,0,0,0.3);
-}
+    }
 
-.request-form h2 {
-  text-align: center;
-  margin-bottom: 25px;
-  color: #fcb69f;
-}
+    .request-form {
+      max-width: 600px;
+      margin: 60px auto;
+      background: #1a1a1a;
+      padding: 30px;
+      border-radius: 20px;
+      box-shadow: 0 0 15px rgba(255, 255, 255, 0.05);
+    }
 
-.request-form input, .request-form textarea {
-  width: 100%;
-  padding: 12px;
-  margin-bottom: 15px;
-  border-radius: 10px;
-  border: none;
-  font-size: 16px;
-  background-color: #2c2c2c;
-  color: #fff;
-}
+    .request-form h2 {
+      text-align: center;
+      margin-bottom: 25px;
+      color: #6C63FF;
+    }
 
-.request-form button {
-  width: 100%;
-  padding: 12px;
-  background: #fcb69f;
-  color: #121212;
-  border: none;
-  border-radius: 30px;
-  font-size: 16px;
-  cursor: pointer;
-  font-weight: bold;
-}
+    .request-form input,
+    .request-form textarea {
+      width: 100%;
+      padding: 12px;
+      margin-bottom: 15px;
+      border-radius: 10px;
+      border: none;
+      font-size: 16px;
+      background-color: #2b2b2b;
+      color: #fff;
+    }
 
-.request-form button:hover {
-  background: #ff9d7d;
-}
+    .request-form button {
+      width: 100%;
+      padding: 12px;
+      background: #6C63FF;
+      color: white;
+      border: none;
+      border-radius: 30px;
+      font-size: 16px;
+      cursor: pointer;
+      transition: background 0.3s ease;
+    }
 
-.request-msg {
-  text-align: center;
-  font-weight: bold;
-  margin-top: 10px;
-}
+    .request-form button:hover {
+      background: #5146d8;
+    }
 
+    .request-msg {
+      text-align: center;
+      font-weight: bold;
+      margin-top: 10px;
+    }
+
+    footer {
+      background-color: #111;
+      color: #ccc;
+      text-align: center;
+      padding: 20px 10px;
+      margin-top: 60px;
+      font-size: 14px;
+    }
+
+    footer a {
+      color: #6C63FF;
+      margin: 0 8px;
+      text-decoration: none;
+    }
+
+    footer a:hover {
+      text-decoration: underline;
+    }
   </style>
 </head>
-<body>  <!-- Header -->  <header>
-    <a href="#" class="logo">My Drama World</a>
+<body>
+
+  <!-- Header -->
+  <header>
+    <a href="index.html" class="logo">My Drama World</a>
     <div id="menuToggle" class="menu-icon">&#9776;</div>
     <nav id="navMenu" class="nav-menu">
-      <a href="/home.html">Home</a>
-      <a href="/movie-request.html">Movie Request</a>
-      <a href="/contact.html">Contact</a>
-      <a href="/privacy-policy.html">Privacy Policy</a>
-      <a href="/about.html">About Us</a>
+      <a href="index.html">Home</a>
+      <a href="movie-request.html">Movie Request</a>
+      <a href="contact.html">Contact</a>
+      <a href="privacy-policy.html">Privacy Policy</a>
+      <a href="about.html">About Us</a>
     </nav>
-  </header>  <!-- Request Form -->  <div class="request-form">
+  </header>
+
+  <!-- Request Form Section -->
+  <div class="request-form">
     <h2>Movie / Drama Request</h2>
     <form id="movie-request-form">
       <input type="text" name="user_name" placeholder="Your Name" required />
@@ -83,14 +109,21 @@
       <button type="submit">Submit Request</button>
       <div class="request-msg" id="result-message"></div>
     </form>
-  </div>  <!-- Footer -->  <footer class="footer">
-    <div class="footer-links">
-      <a href="/privacy-policy.html">Privacy Policy</a>
-      <a href="/contact.html">Contact</a>
-      <a href="/about.html">About Us</a>
+  </div>
+
+  <!-- Footer -->
+  <footer>
+    &copy; 2025 My Drama World. All rights reserved.
+    <div>
+      <a href="privacy-policy.html">Privacy Policy</a> |
+      <a href="terms.html">Terms & Conditions</a> |
+      <a href="contact.html">Contact</a>
     </div>
-    <p>&copy; 2025 My Drama World. All rights reserved.</p>
-  </footer>  <!-- EmailJS -->  <script src="https://cdn.jsdelivr.net/npm/@emailjs/browser@3/dist/email.min.js"></script>  <script>
+  </footer>
+
+  <!-- EmailJS CDN -->
+  <script src="https://cdn.jsdelivr.net/npm/@emailjs/browser@3/dist/email.min.js"></script>
+  <script>
     (function() {
       emailjs.init("x5OHkbIpVsvztciEQ");
     })();
@@ -108,19 +141,22 @@
           document.getElementById("result-message").style.color = "red";
         });
     });
-  </script>  <script>
-    // Menu toggle
-    document.getElementById('menuToggle').addEventListener('click', function(event) {
-      document.getElementById('navMenu').classList.toggle('active');
+
+    // Menu Toggle
+    document.getElementById('menuToggle').addEventListener('click', function (event) {
+      const navMenu = document.getElementById('navMenu');
+      navMenu.classList.toggle('active');
       event.stopPropagation();
     });
 
-    document.addEventListener('mousedown', function(event) {
-      const nav = document.getElementById('navMenu');
-      const toggle = document.getElementById('menuToggle');
-      if (!nav.contains(event.target) && !toggle.contains(event.target)) {
-        nav.classList.remove('active');
+    document.addEventListener('mousedown', function (event) {
+      const navMenu = document.getElementById('navMenu');
+      const menuToggle = document.getElementById('menuToggle');
+      if (!navMenu.contains(event.target) && !menuToggle.contains(event.target)) {
+        navMenu.classList.remove('active');
       }
     });
-  </script></body>
+  </script>
+
+</body>
 </html>
