@@ -183,7 +183,6 @@ header {
   background: #00ccbb;
 }
 
-/* No Result Message */
 #noResultMessage {
   display: flex;
   justify-content: center;
@@ -198,6 +197,14 @@ header {
   border-radius: 10px;
   max-width: 90%;
   text-align: center;
+  text-decoration: none;
+  cursor: pointer;
+  transition: background-color 0.3s, color 0.3s;
+}
+
+#noResultMessage:hover {
+  background-color: #aa0000;
+  color: #fff;
 }
 
 /* Media Queries */
