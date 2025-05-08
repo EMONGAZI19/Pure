@@ -122,7 +122,7 @@ header {
 }
 
 .search-btn {
-  display: none; /* Hide the old button if not needed */
+  display: none;
 }
 
 /* Movie Section */
@@ -195,6 +195,7 @@ header {
   border: 1px solid #aa0000;
   border-radius: 10px;
   width: fit-content;
+  display: block;
 }
 
 /* Media Queries */
