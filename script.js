@@ -65,48 +65,55 @@ document.addEventListener("DOMContentLoaded", function () {
 
   window.searchMovie = function () {
     const searchQuery = document.getElementById('searchInput').value.toLowerCase();
-    const movieCards = document.querySelectorAll('.movie-card');
     const movieSections = document.querySelectorAll('.movie-section');
+    const oldResults = document.getElementById('searchResults');
+    const oldMessage = document.getElementById('noResultMessage');
 
-    let found = false;
+    // Remove previous search results or message
+    oldResults?.remove();
+    oldMessage?.remove();
 
-    if (searchQuery.trim() === "") {
-      // যদি কিছু লেখা না থাকে, সব সেকশন দেখাও
+    if (searchQuery.trim() === '') {
       movieSections.forEach(section => section.style.display = '');
-      movieCards.forEach(card => card.style.display = '');
-      document.getElementById('noResultMessage')?.remove();
       return;
     }
 
-    // সব সেকশন লুকাও
+    // Hide all sections for search view
     movieSections.forEach(section => section.style.display = 'none');
 
-    movieCards.forEach(card => {
-      const title = card.querySelector('h3').textContent.toLowerCase();
-      if (title.includes(searchQuery)) {
-        card.style.display = '';
-        const section = card.closest('.movie-section');
-        if (section) section.style.display = '';
-        found = true;
-      } else {
-        card.style.display = 'none';
-      }
-    });
+    let found = false;
+    const resultSection = document.createElement('div');
+    resultSection.classList.add('movie-section');
+    resultSection.id = 'searchResults';
 
-    // ফলাফল না পেলে মেসেজ দেখাও
-    let noResultMessage = document.getElementById('noResultMessage');
-    if (!found) {
-      if (!noResultMessage) {
-        noResultMessage = document.createElement('div');
-        noResultMessage.id = 'noResultMessage';
-        noResultMessage.style.textAlign = 'center';
-        noResultMessage.style.color = '#ff4444';
-        noResultMessage.style.margin = '20px';
-        noResultMessage.textContent = 'এই মুভি টি নেই, রিকুয়েস্ট বাটন থেকে রিকুয়েস্ট করুন';
-        document.body.appendChild(noResultMessage);
-      }
+    const heading = document.createElement('h2');
+    heading.textContent = `Search Results for "${searchQuery}"`;
+    resultSection.appendChild(heading);
+
+    const resultGrid = document.createElement('div');
+    resultGrid.classList.add('movie-grid');
+
+    for (const category in movies) {
+      movies[category].forEach(movie => {
+        if (movie.title.toLowerCase().includes(searchQuery)) {
+          const movieCard = createMovieCard(movie);
+          resultGrid.appendChild(movieCard);
+          found = true;
+        }
+      });
+    }
+
+    if (found) {
+      resultSection.appendChild(resultGrid);
+      document.body.insertBefore(resultSection, document.querySelector('footer'));
     } else {
-      noResultMessage?.remove();
+      const noResultMessage = document.createElement('div');
+      noResultMessage.id = 'noResultMessage';
+      noResultMessage.style.textAlign = 'center';
+      noResultMessage.style.color = '#ff4444';
+      noResultMessage.style.margin = '20px';
+      noResultMessage.textContent = 'এই মুভি টি নেই, রিকুয়েস্ট বাটন থেকে রিকুয়েস্ট করুন';
+      document.body.appendChild(noResultMessage);
     }
   }
 
