@@ -66,7 +66,8 @@ document.addEventListener("DOMContentLoaded", function () {
     loadMovies(category, !isShowingAll);
   }
 
-  window.searchMovie = function () {
+  // LIVE SEARCH
+  searchInput.addEventListener('input', function () {
     const query = searchInput.value.toLowerCase().trim();
     const oldResults = document.getElementById('searchResults');
     const oldMessage = document.getElementById('noResultMessage');
@@ -115,25 +116,9 @@ document.addEventListener("DOMContentLoaded", function () {
       noResult.textContent = 'এই মুভি টি নেই, রিকুয়েস্ট বাটন থেকে রিকুয়েস্ট করুন';
       document.body.appendChild(noResult);
     }
-  }
-
-  // Optional: fallback Enter key support (already handled by form below)
-  searchInput.addEventListener('keydown', function (e) {
-    if (e.key === 'Enter') {
-      e.preventDefault();
-      searchMovie();
-    }
   });
 
-  // NEW: form submission trigger
-  const searchForm = document.getElementById('searchForm');
-  if (searchForm) {
-    searchForm.addEventListener('submit', function (e) {
-      e.preventDefault();
-      searchMovie();
-    });
-  }
-
+  // Initial Load for All Categories
   const categories = [
     'latestMovies',
     'banglaMovies',
@@ -142,6 +127,5 @@ document.addEventListener("DOMContentLoaded", function () {
     'banglaDubbedMovies',
     'animeMovies'
   ];
-
   categories.forEach(category => loadMovies(category));
 });
