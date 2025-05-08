@@ -1,0 +1,157 @@
+<!DOCTYPE html>
+<html lang="bn">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Terms & Conditions - My Drama World</title>
+  <link rel="stylesheet" href="style.css" />
+  <style>
+    body {
+      background-color: #111;
+      color: #f0f0f0;
+      font-family: 'Segoe UI', sans-serif;
+      line-height: 1.7;
+    }
+
+    .language-toggle {
+      text-align: center;
+      margin: 20px 0;
+    }
+
+    .language-toggle button {
+      padding: 10px 20px;
+      margin: 0 10px;
+      border: none;
+      border-radius: 5px;
+      background-color: #333;
+      color: white;
+      cursor: pointer;
+      transition: 0.3s;
+    }
+
+    .language-toggle button.active {
+      background-color: #00ffee;
+      color: #000;
+    }
+
+    .terms-section {
+      max-width: 950px;
+      margin: auto;
+      padding: 30px;
+      display: none;
+      background-color: #1c1c1c;
+      border-radius: 10px;
+    }
+
+    .terms-section.active {
+      display: block;
+    }
+
+    .terms-section h2 {
+      border-bottom: 1px solid #444;
+      padding-bottom: 10px;
+      margin-bottom: 20px;
+    }
+
+    .terms-section h3 {
+      margin-top: 20px;
+      color: #00ffee;
+    }
+
+    footer {
+      background-color: #000;
+      color: #ccc;
+      padding: 20px;
+      text-align: center;
+      font-size: 14px;
+    }
+
+    footer a {
+      color: #00ffee;
+      text-decoration: none;
+    }
+  </style>
+</head>
+<body>
+
+  <!-- Header -->
+  <header>
+    <a href="/" class="logo">My Drama World</a>
+    <div id="menuToggle" class="menu-icon">&#9776;</div>
+    <nav id="navMenu" class="nav-menu">
+      <a href="/home.html">Home</a>
+      <a href="/movie-request.html">Movie Request</a>
+      <a href="/contact.html">Contact</a>
+      <a href="/privacy-policy.html">Privacy Policy</a>
+      <a href="/terms.html">Terms & Conditions</a>
+      <a href="/about.html">About Us</a>
+    </nav>
+  </header>
+
+  <!-- Language Toggle -->
+  <div class="language-toggle">
+    <button id="btn-bn" class="active">বাংলা</button>
+    <button id="btn-en">English</button>
+  </div>
+
+  <!-- Terms Bengali -->
+  <div id="terms-bn" class="terms-section active">
+    <h2>শর্তাবলী</h2>
+    <p>এই ওয়েবসাইট ব্যবহারের সময় আপনি আমাদের নিম্নলিখিত শর্তাবলীতে সম্মত হচ্ছেন।</p>
+
+    <h3>ব্যবহার</h3>
+    <p>আপনি কেবলমাত্র ব্যক্তিগত এবং অ-বাণিজ্যিক উদ্দেশ্যে এই সাইট ব্যবহার করতে পারবেন।</p>
+
+    <h3>কনটেন্ট</h3>
+    <p>আমাদের সমস্ত কনটেন্ট শুধুমাত্র বিনোদনের উদ্দেশ্যে প্রদান করা হয়েছে। আমরা কোনো পাইরেসি সমর্থন করি না।</p>
+
+    <h3>দায়িত্ব</h3>
+    <p>এই ওয়েবসাইটের যেকোনো ব্যবহার আপনার নিজ দায়িত্বে। আমরা কোনো তথ্য ভুল হলে তার জন্য দায়ী নই।</p>
+  </div>
+
+  <!-- Terms English -->
+  <div id="terms-en" class="terms-section">
+    <h2>Terms & Conditions</h2>
+    <p>By using this website, you agree to the following terms and conditions.</p>
+
+    <h3>Usage</h3>
+    <p>You may only use this site for personal and non-commercial purposes.</p>
+
+    <h3>Content</h3>
+    <p>All content provided on this site is for entertainment purposes only. We do not support or promote piracy.</p>
+
+    <h3>Liability</h3>
+    <p>Use of this website is at your own risk. We are not responsible for any inaccuracies in the information provided.</p>
+  </div>
+
+  <!-- Footer -->
+  <footer>
+    &copy; 2025 My Drama World. All rights reserved. | 
+    <a href="/privacy-policy.html">Privacy Policy</a>
+  </footer>
+
+  <!-- Scripts -->
+  <script src="script.js"></script>
+  <script>
+    // Language toggle
+    const btnBn = document.getElementById('btn-bn');
+    const btnEn = document.getElementById('btn-en');
+    const termsBn = document.getElementById('terms-bn');
+    const termsEn = document.getElementById('terms-en');
+
+    btnBn.addEventListener('click', () => {
+      termsBn.classList.add('active');
+      termsEn.classList.remove('active');
+      btnBn.classList.add('active');
+      btnEn.classList.remove('active');
+    });
+
+    btnEn.addEventListener('click', () => {
+      termsBn.classList.remove('active');
+      termsEn.classList.add('active');
+      btnBn.classList.remove('active');
+      btnEn.classList.add('active');
+    });
+  </script>
+</body>
+</html>
