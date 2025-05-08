@@ -5,159 +5,138 @@
   <title>মুভি ডাউনলোড ধাপ</title>
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <style>
-    * { margin: 0; padding: 0; box-sizing: border-box; }
     body {
-      background: #121212;
+      font-family: sans-serif;
+      background: #111;
       color: #fff;
-      font-family: 'Segoe UI', sans-serif;
       padding: 20px;
       text-align: center;
     }
-    .banner-ad, .bottom-ad, .mid-ad {
-      background: #222;
+    .banner-ad, .footer-ad {
+      background: #333;
+      color: #ddd;
       padding: 20px;
-      margin: 15px 0;
-      border-radius: 10px;
-      border: 1px dashed #444;
+      margin-bottom: 15px;
     }
     h1 {
+      margin-top: 0;
       font-size: 26px;
-      margin: 10px 0;
     }
     .step {
       display: none;
-      background: #1e1e1e;
+      border: 1px solid #444;
       padding: 20px;
-      border-radius: 12px;
-      border: 1px solid #333;
-      margin-top: 10px;
+      margin-bottom: 20px;
+      border-radius: 8px;
+      background: #222;
     }
     .step.active {
       display: block;
     }
-    h2.step-title {
-      margin-top: 10px;
-      font-size: 20px;
-    }
     .timer {
-      font-size: 20px;
-      margin: 10px 0;
+      font-size: 22px;
+      margin: 15px 0;
+    }
+    .progress {
+      height: 8px;
+      background: #444;
+      border-radius: 5px;
+      overflow: hidden;
+      margin-bottom: 15px;
     }
     .progress-bar {
-      width: 100%;
-      height: 8px;
-      background: #333;
-      border-radius: 4px;
-      overflow: hidden;
-      margin-bottom: 10px;
-    }
-    .progress-fill {
       height: 100%;
+      background: #0f0;
       width: 0%;
-      background: #e91e63;
-      transition: width 1s linear;
+      transition: width 1s;
     }
-    .btn, .skip {
-      display: none;
-      padding: 12px 24px;
-      font-size: 16px;
-      background: #e91e63;
-      border: none;
-      border-radius: 6px;
+    .button {
+      background: #00c853;
       color: #fff;
+      padding: 10px 20px;
+      border: none;
+      font-size: 16px;
       cursor: pointer;
-      transition: background 0.3s ease;
-      margin: 10px auto;
+      border-radius: 5px;
+      margin: 5px;
+      display: none;
     }
-    .btn:hover, .skip:hover {
-      background: #d81b60;
-    }
-    .skip {
-      background: #666;
+    .button:hover {
+      background: #00b248;
     }
   </style>
 </head>
 <body>
 
-  <div class="banner-ad">
-    <p>[ব্যানার এড - উপরের বিজ্ঞাপন]</p>
-  </div>
+  <div class="banner-ad">[এখানে আপনার ব্যানার এড কোড বা ইমেজ থাকবে]</div>
+  <h1>মুভি ডাউনলোডের আগে ধাপ সম্পন্ন করুন</h1>
 
-  <h1>মুভি ডাউনলোডের আগে ধাপগুলো সম্পন্ন করুন</h1>
-
-  <!-- Step 1 -->
   <div id="step1" class="step">
-    <h2 class="step-title">Step 1 of 3</h2>
-    <div class="mid-ad"><p>[মধ্যবর্তী বিজ্ঞাপন]</p></div>
-    <div class="bottom-ad"><p>[এড - Step এর নিচে]</p></div>
-
-    <div class="progress-bar"><div class="progress-fill" id="progress1"></div></div>
-    <div class="timer" id="timer1">২০</div>
-    <button class="btn" id="btn1">পরবর্তী ধাপে যান</button>
-    <button class="skip" id="skip1">স্কিপ করুন</button>
-
-    <div class="bottom-ad"><p>[বাটনের নিচে এড]</p></div>
+    <h2>Step 1</h2>
+    <div class="footer-ad">[এখানে এড হবে]</div>
+    <div class="timer">20 সেকেন্ড অপেক্ষা করুন: <span id="timer1">20</span></div>
+    <div class="progress"><div id="progress1" class="progress-bar"></div></div>
+    <button class="button" id="btn1">পরবর্তী ধাপে যান</button>
+    <button class="button" id="skip1">স্কিপ করুন</button>
   </div>
 
-  <!-- Step 2 -->
   <div id="step2" class="step">
-    <h2 class="step-title">Step 2 of 3</h2>
-    <div class="mid-ad"><p>[মধ্যবর্তী বিজ্ঞাপন]</p></div>
-    <div class="bottom-ad"><p>[এড - Step এর নিচে]</p></div>
-
-    <div class="progress-bar"><div class="progress-fill" id="progress2"></div></div>
-    <div class="timer" id="timer2">২০</div>
-    <button class="btn" id="btn2">পরবর্তী ধাপে যান</button>
-    <button class="skip" id="skip2">স্কিপ করুন</button>
-
-    <div class="bottom-ad"><p>[বাটনের নিচে এড]</p></div>
+    <h2>Step 2</h2>
+    <div class="footer-ad">[এখানে এড হবে]</div>
+    <div class="timer">20 সেকেন্ড অপেক্ষা করুন: <span id="timer2">20</span></div>
+    <div class="progress"><div id="progress2" class="progress-bar"></div></div>
+    <button class="button" id="btn2">পরবর্তী ধাপে যান</button>
+    <button class="button" id="skip2">স্কিপ করুন</button>
   </div>
 
-  <!-- Step 3 -->
   <div id="step3" class="step">
-    <h2 class="step-title">Step 3 of 3</h2>
-    <div class="mid-ad"><p>[মধ্যবর্তী বিজ্ঞাপন]</p></div>
-    <div class="bottom-ad"><p>[এড - Step এর নিচে]</p></div>
-
-    <div class="progress-bar"><div class="progress-fill" id="progress3"></div></div>
-    <div class="timer" id="timer3">২০</div>
-    <button class="btn" id="btn3">ডাউনলোড পেজে যান</button>
-    <button class="skip" id="skip3">স্কিপ করুন</button>
-
-    <div class="bottom-ad"><p>[বাটনের নিচে এড]</p></div>
+    <h2>Step 3</h2>
+    <div class="footer-ad">[এখানে এড হবে]</div>
+    <div class="timer">20 সেকেন্ড অপেক্ষা করুন: <span id="timer3">20</span></div>
+    <div class="progress"><div id="progress3" class="progress-bar"></div></div>
+    <button class="button" id="btn3">ডাউনলোড শুরু করুন</button>
+    <button class="button" id="skip3">স্কিপ করুন</button>
   </div>
 
   <script>
     document.addEventListener("DOMContentLoaded", function () {
-      const targetUrl = new URLSearchParams(window.location.search).get("url");
+      const movieId = new URLSearchParams(window.location.search).get("id");
       const adRedirectUrl = "https://www.profitableratecpm.com/c6enwfc3?key=9791fdddf7df25d113a29cbf2c79dfdb";
       let currentStep = parseInt(localStorage.getItem("adStep") || "1");
+      let targetUrl = "";
+
+      fetch("links.json")
+        .then(res => res.json())
+        .then(data => {
+          targetUrl = data[movieId];
+          if (!targetUrl) {
+            alert("ভুল বা অনুপলব্ধ লিংক!");
+            return;
+          }
+          startStep(currentStep);
+        });
 
       function startStep(step) {
         localStorage.setItem("adStep", step);
-
+        document.querySelectorAll(".step").forEach(s => s.classList.remove("active"));
+        const stepDiv = document.getElementById(`step${step}`);
         const timer = document.getElementById(`timer${step}`);
         const btn = document.getElementById(`btn${step}`);
         const skip = document.getElementById(`skip${step}`);
         const progress = document.getElementById(`progress${step}`);
         let seconds = 20;
         let elapsed = 0;
-
-        document.querySelectorAll(".step").forEach(s => s.classList.remove("active"));
-        document.getElementById(`step${step}`).classList.add("active");
+        stepDiv.classList.add("active");
 
         timer.textContent = seconds;
+        progress.style.width = "0%";
         let interval = setInterval(() => {
           seconds--;
           elapsed++;
           timer.textContent = seconds;
           progress.style.width = `${(elapsed / 20) * 100}%`;
-
-          if (seconds === 10) {
-            skip.style.display = "inline-block";
-          }
-
-          if (seconds === 0) {
+          if (seconds === 10) skip.style.display = "inline-block";
+          if (seconds <= 0) {
             clearInterval(interval);
             btn.style.display = "inline-block";
             skip.style.display = "none";
@@ -168,14 +147,9 @@
           if (step < 3) {
             localStorage.setItem("adStep", step + 1);
             window.location.href = adRedirectUrl;
-            setTimeout(() => startStep(step + 1), 1000);
           } else {
             localStorage.removeItem("adStep");
-            if (targetUrl) {
-              window.location.href = targetUrl;
-            } else {
-              alert("লিংক খুঁজে পাওয়া যায়নি!");
-            }
+            window.location.href = targetUrl;
           }
         };
 
@@ -188,8 +162,6 @@
           skip.onclick = proceed;
         };
       }
-
-      startStep(currentStep);
     });
   </script>
 
