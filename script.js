@@ -1,7 +1,7 @@
 document.addEventListener("DOMContentLoaded", function () {
   const menuToggle = document.getElementById('menuToggle');
   const navMenu = document.getElementById('navMenu');
-  const searchInput = document.getElementById('searchInput'); // এখন ঠিক জায়গায় আছে
+  const searchInput = document.getElementById('searchInput');
 
   // Toggle menu
   menuToggle.addEventListener('click', (event) => {
@@ -117,8 +117,8 @@ document.addEventListener("DOMContentLoaded", function () {
     }
   }
 
-  // Enter key triggers search
-  searchInput.addEventListener('keypress', function (e) {
+  // Fix: use keydown for better browser support
+  searchInput.addEventListener('keydown', function (e) {
     if (e.key === 'Enter') {
       e.preventDefault();
       searchMovie();
