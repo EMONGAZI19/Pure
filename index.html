@@ -10,10 +10,10 @@
 
   <!-- Header -->
   <header>
-    <a href="#" class="logo">My Drama World</a>
+    <a href="/index.html" class="logo">My Drama World</a>
     <div id="menuToggle" class="menu-icon">&#9776;</div>
     <nav id="navMenu" class="nav-menu">
-      <a href="/home.html">Home</a>
+      <a href="/index.html">Home</a>
       <a href="/movie-request.html">Movie Request</a>
       <a href="/contact.html">Contact</a>
       <a href="/privacy-policy.html">Privacy Policy</a>
@@ -32,15 +32,11 @@
     </div>
   </div>
 
-  <!-- Search Bar Below the Notice -->
+  <!-- Search Bar -->
   <div class="search-container">
-    <input type="text" id="searchInput" class="search-bar" placeholder="মুভি খুঁজুন..."/>
+    <input type="text" id="searchInput" class="search-bar" placeholder="মুভি খুঁজুন..." />
     <button class="search-btn" onclick="searchMovie()">সার্চ</button>
   </div>
-
-  <p id="noResultMessage" style="text-align:center; color: red; margin-top:10px; display: none;">
-    এই মুভি টি নেই, রিকুয়েস্ট বাটন থেকে রিকুয়েস্ট করুন
-  </p>
 
   <!-- Movie Loader Sections -->
   <div class="movie-section">
@@ -79,16 +75,18 @@
     <button class="see-all" data-category="animeMovies" data-showing-all="false" onclick="toggleShow('animeMovies')">See All</button>
   </div>
 
+  <!-- Scripts -->
   <script src="movies.js"></script>
   <script src="script.js"></script>
+
+  <!-- Footer -->
+  <footer class="footer">
+    <p>&copy; 2025 My Drama World. All rights reserved.</p>
+    <div class="footer-links">
+      <a href="/privacy-policy.html">Privacy Policy</a>
+      <a href="/contact.html">Contact</a>
+      <a href="/about.html">About Us</a>
+    </div>
+  </footer>
 </body>
 </html>
-<!-- Footer -->
-<footer class="footer">
-  <p>&copy; 2025 My Drama World. All rights reserved.</p>
-  <div class="footer-links">
-    <a href="/privacy-policy.html">Privacy Policy</a>
-    <a href="/contact.html">Contact</a>
-    <a href="/about.html">About Us</a>
-  </div>
-</footer>
