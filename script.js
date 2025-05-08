@@ -117,6 +117,13 @@ document.addEventListener("DOMContentLoaded", function () {
     }
   }
 
+  // Enable Enter key to trigger search
+  document.getElementById('searchInput').addEventListener('keyup', function (event) {
+    if (event.key === 'Enter') {
+      searchMovie();
+    }
+  });
+
   const categories = [
     'latestMovies',
     'banglaMovies',
