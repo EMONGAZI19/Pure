@@ -111,8 +111,8 @@ document.addEventListener("DOMContentLoaded", function () {
     } else {
       const noResult = document.createElement('a');
       noResult.id = 'noResultMessage';
-      noResult.href = 'request.html';
-      noResult.textContent = 'এই মুভি টি নেই, রিকুয়েস্ট বাটন থেকে রিকুয়েস্ট করুন';
+      noResult.href = 'movie-request.html';
+      noResult.textContent = 'এই মুভি টি নেই,এখানে ক্লিক করে রিকুয়েস্ট করুন';
       document.body.appendChild(noResult);
     }
   });
