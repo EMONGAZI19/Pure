@@ -1,3 +1,4 @@
+/* Reset & Base */
 * {
   margin: 0;
   padding: 0;
@@ -97,30 +98,31 @@ header {
 /* Search Bar */
 .search-container {
   display: flex;
-  align-items: center;
-  margin: 20px auto;
   justify-content: center;
+  margin: 20px auto;
+  padding: 5px;
 }
 
 .search-bar {
-  padding: 8px;
-  border: none;
-  border-radius: 5px;
-  width: 200px;
-  margin-right: 10px;
+  width: 100%;
+  max-width: 500px;
+  padding: 10px 15px;
+  font-size: 16px;
+  border: 1px solid #444;
+  border-radius: 25px;
+  outline: none;
+  background-color: #222;
+  color: #00ffee;
+  transition: 0.3s ease;
+}
+
+.search-bar:focus {
+  border-color: #00ffee;
+  box-shadow: 0 0 10px rgba(0, 255, 255, 0.3);
 }
 
 .search-btn {
-  background-color: #00ffee;
-  color: #000;
-  border: none;
-  padding: 8px 15px;
-  border-radius: 5px;
-  cursor: pointer;
-}
-
-.search-btn:hover {
-  background-color: #00ccbb;
+  display: none; /* Hide the old button if not needed */
 }
 
 /* Movie Section */
@@ -147,6 +149,11 @@ header {
   border-radius: 8px;
   box-shadow: 0 4px 10px rgba(0, 255, 255, 0.3);
   text-align: center;
+  transition: transform 0.2s ease;
+}
+
+.movie-card:hover {
+  transform: scale(1.03);
 }
 
 .movie-card img {
@@ -176,6 +183,20 @@ header {
   background: #00ccbb;
 }
 
+/* No Result Message */
+#noResultMessage {
+  text-align: center;
+  color: #ff4444;
+  font-size: 1.1rem;
+  font-weight: bold;
+  margin: 30px auto;
+  padding: 10px 20px;
+  background-color: #220000;
+  border: 1px solid #aa0000;
+  border-radius: 10px;
+  width: fit-content;
+}
+
 /* Media Queries */
 @media (max-width: 768px) {
   .movie-grid {
@@ -183,9 +204,9 @@ header {
   }
 }
 
-/* Simple Footer */
+/* Footer */
 .footer {
-  background-color: #000; /* same as header */
+  background-color: #000;
   color: #aaa;
   text-align: center;
   padding: 20px 10px;
@@ -195,31 +216,20 @@ header {
 
 .footer-links {
   margin-top: 10px;
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  gap: 10px;
 }
 
 .footer-links a {
   color: #00ffee;
-  margin: 0 10px;
   text-decoration: none;
   font-weight: 500;
+  padding: 5px 10px;
+  transition: color 0.3s;
 }
 
 .footer-links a:hover {
   color: #00ccbb;
-}
-
-.footer-links {
-  margin-top: 10px;
-  display: flex;
-  justify-content: center;
-  flex-wrap: wrap;
-  gap: 10px; /* adds space between links */
-}
-
-.footer-links a {
-  color: #00ffee;
-  text-decoration: none;
-  font-weight: 500;
-  padding: 5px 10px; /* spacing around each link */
-  transition: color 0.3s;
 }
