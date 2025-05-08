@@ -1,11 +1,12 @@
 document.addEventListener("DOMContentLoaded", function () {
   const menuToggle = document.getElementById('menuToggle');
   const navMenu = document.getElementById('navMenu');
+  const searchInput = document.getElementById('searchInput');
 
-  // Toggle menu on menu icon click
+  // Toggle menu
   menuToggle.addEventListener('click', (event) => {
     navMenu.classList.toggle('active');
-    event.stopPropagation(); // Prevent event from bubbling up
+    event.stopPropagation();
   });
 
   // Close menu if clicked outside
@@ -15,6 +16,7 @@ document.addEventListener("DOMContentLoaded", function () {
     }
   });
 
+  // Create a movie card
   function createMovieCard(movie) {
     const movieCard = document.createElement('div');
     movieCard.classList.add('movie-card');
@@ -37,6 +39,7 @@ document.addEventListener("DOMContentLoaded", function () {
     return movieCard;
   }
 
+  // Load movies per category
   function loadMovies(category, showAll = false) {
     const movieContainer = document.getElementById(category);
     movieContainer.innerHTML = '';
@@ -64,22 +67,19 @@ document.addEventListener("DOMContentLoaded", function () {
   }
 
   window.searchMovie = function () {
-    const searchQuery = document.getElementById('searchInput').value.toLowerCase();
-    const movieSections = document.querySelectorAll('.movie-section');
+    const query = searchInput.value.toLowerCase().trim();
     const oldResults = document.getElementById('searchResults');
     const oldMessage = document.getElementById('noResultMessage');
-
-    // Remove previous search results or message
     oldResults?.remove();
     oldMessage?.remove();
 
-    if (searchQuery.trim() === '') {
-      movieSections.forEach(section => section.style.display = '');
+    const allSections = document.querySelectorAll('.movie-section');
+    if (query === "") {
+      allSections.forEach(section => section.style.display = '');
       return;
+    } else {
+      allSections.forEach(section => section.style.display = 'none');
     }
-
-    // Hide all sections for search view
-    movieSections.forEach(section => section.style.display = 'none');
 
     let found = false;
     const resultSection = document.createElement('div');
@@ -87,7 +87,7 @@ document.addEventListener("DOMContentLoaded", function () {
     resultSection.id = 'searchResults';
 
     const heading = document.createElement('h2');
-    heading.textContent = `Search Results for "${searchQuery}"`;
+    heading.textContent = `Search Results for "${query}"`;
     resultSection.appendChild(heading);
 
     const resultGrid = document.createElement('div');
@@ -95,7 +95,7 @@ document.addEventListener("DOMContentLoaded", function () {
 
     for (const category in movies) {
       movies[category].forEach(movie => {
-        if (movie.title.toLowerCase().includes(searchQuery)) {
+        if (movie.title.toLowerCase().includes(query)) {
           const movieCard = createMovieCard(movie);
           resultGrid.appendChild(movieCard);
           found = true;
@@ -107,19 +107,20 @@ document.addEventListener("DOMContentLoaded", function () {
       resultSection.appendChild(resultGrid);
       document.body.insertBefore(resultSection, document.querySelector('footer'));
     } else {
-      const noResultMessage = document.createElement('div');
-      noResultMessage.id = 'noResultMessage';
-      noResultMessage.style.textAlign = 'center';
-      noResultMessage.style.color = '#ff4444';
-      noResultMessage.style.margin = '20px';
-      noResultMessage.textContent = 'এই মুভি টি নেই, রিকুয়েস্ট বাটন থেকে রিকুয়েস্ট করুন';
-      document.body.appendChild(noResultMessage);
+      const noResult = document.createElement('div');
+      noResult.id = 'noResultMessage';
+      noResult.style.textAlign = 'center';
+      noResult.style.color = '#ff4444';
+      noResult.style.margin = '20px';
+      noResult.textContent = 'এই মুভি টি নেই, রিকুয়েস্ট বাটন থেকে রিকুয়েস্ট করুন';
+      document.body.appendChild(noResult);
     }
   }
 
-  // Enable Enter key to trigger search
-  document.getElementById('searchInput').addEventListener('keyup', function (event) {
-    if (event.key === 'Enter') {
+  // Enter key triggers search
+  searchInput.addEventListener('keypress', function (e) {
+    if (e.key === 'Enter') {
+      e.preventDefault();
       searchMovie();
     }
   });
