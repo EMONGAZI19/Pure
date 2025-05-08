@@ -2,7 +2,7 @@ const movies = {
   latestMovies: [
     { title: 'Borbaad', image: 'https://m.media-amazon.com/images/M/MV5BNDY1ZWQyNjMtYTJjMC00ZjM3LTk3MWItMTcwNjg4ODZmODZhXkEyXkFqcGc@._V1_QL75_UX704_.jpg', link: 'https://movieflix9.netlify.app/borbaadhd' },
     { title: 'Magic Movie', image: 'https://flixmet.com/wp-content/uploads/2024/10/oeHJxXoH3DlxMwfPKQclb9zsr8F-152x228.jpg', link: 'https://movieflix9.netlify.app/magic' },
-    { title: 'Movie 3', image: 'https://m.media-amazon.com/images/M/MV5BNDY1ZWQyNjMtYTJjMC00ZjM3LTk3MWItMTcwNjg4ODZmODZhXkEyXkFqcGc@._V1_QL75_UX704_.jpg', link: 'https://example.com/movie3' },
+    { title: 'The Bhootni', image: 'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSZ0qKEGPTu_KP8A8TXL5lP9_pn1mj7k2o5ep4Gm6lmMp4MP_x_vG6XtF1B&s=10', link: 'https://movieflix9.netlify.app/bhootni' },
     { title: 'Movie 4', image: 'https://m.media-amazon.com/images/M/MV5BNDY1ZWQyNjMtYTJjMC00ZjM3LTk3MWItMTcwNjg4ODZmODZhXkEyXkFqcGc@._V1_QL75_UX704_.jpg', link: 'https://example.com/movie4' },
     { title: 'Movie 5', image: 'https://m.media-amazon.com/images/M/MV5BNDY1ZWQyNjMtYTJjMC00ZjM3LTk3MWItMTcwNjg4ODZmODZhXkEyXkFqcGc@._V1_QL75_UX704_.jpg', link: 'https://example.com/movie5' },
     { title: 'Movie 6', image: 'https://m.media-amazon.com/images/M/MV5BNDY1ZWQyNjMtYTJjMC00ZjM3LTk3MWItMTcwNjg4ODZmODZhXkEyXkFqcGc@._V1_QL75_UX704_.jpg', link: 'https://example.com/movie6' },
