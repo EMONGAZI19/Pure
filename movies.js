@@ -1,6 +1,6 @@
 const movies = {
   latestMovies: [
-    { title: 'Borbadd', image: 'https://m.media-amazon.com/images/M/MV5BNDY1ZWQyNjMtYTJjMC00ZjM3LTk3MWItMTcwNjg4ODZmODZhXkEyXkFqcGc@._V1_QL75_UX704_.jpg', link: 'https://movieflix9.netlify.app/borb-aad.html' },
+    { title: 'Borbadd', image: 'https://m.media-amazon.com/images/M/MV5BNDY1ZWQyNjMtYTJjMC00ZjM3LTk3MWItMTcwNjg4ODZmODZhXkEyXkFqcGc@._V1_QL75_UX704_.jpg', link: 'https://movieflix9.netlify.app/borbaadhd.html' },
     { title: 'Movie 2', image: 'https://m.media-amazon.com/images/M/MV5BNDY1ZWQyNjMtYTJjMC00ZjM3LTk3MWItMTcwNjg4ODZmODZhXkEyXkFqcGc@._V1_QL75_UX704_.jpg', link: 'https://example.com/movie2' },
     { title: 'Movie 3', image: 'https://m.media-amazon.com/images/M/MV5BNDY1ZWQyNjMtYTJjMC00ZjM3LTk3MWItMTcwNjg4ODZmODZhXkEyXkFqcGc@._V1_QL75_UX704_.jpg', link: 'https://example.com/movie3' },
     { title: 'Movie 4', image: 'https://m.media-amazon.com/images/M/MV5BNDY1ZWQyNjMtYTJjMC00ZjM3LTk3MWItMTcwNjg4ODZmODZhXkEyXkFqcGc@._V1_QL75_UX704_.jpg', link: 'https://example.com/movie4' },
