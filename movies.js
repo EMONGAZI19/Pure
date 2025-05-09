@@ -33,7 +33,7 @@ const movies = {
     // Add more movies here...
   ],
   tvwebseries: [
-    { title: 'Emoji', image: 'bangladubbed1.jpg', link: 'https://example.com/bangladubbed1' },
+    { title: 'Emoji', image: 'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRyBGj3VcgaQ2J9I3tl68_HC84kNulomfDthLV2FcZKK_RfO_mj0VOiAGw&s=10', link: 'https://movieflix9.netlify.app/emoji' },
     // Add more movies here...
   ],
   animeMovies: [
