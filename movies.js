@@ -32,6 +32,10 @@ const movies = {
     { title: 'Bangla Dubbed Movie 1', image: 'bangladubbed1.jpg', link: 'https://example.com/bangladubbed1' },
     // Add more movies here...
   ],
+  tvwebseries: [
+    { title: 'Emoji', image: 'bangladubbed1.jpg', link: 'https://example.com/bangladubbed1' },
+    // Add more movies here...
+  ],
   animeMovies: [
     { title: 'Anime Movie 1', image: 'anime1.jpg', link: 'https://example.com/anime1' },
     // Add more movies here...
