@@ -124,6 +124,7 @@ document.addEventListener("DOMContentLoaded", function () {
     'hindiDubbedMovies',
     'hollywoodMovies',
     'banglaDubbedMovies',
+    'tvwebseries',
     'animeMovies'
   ];
   categories.forEach(category => loadMovies(category));
