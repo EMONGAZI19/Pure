@@ -34,7 +34,13 @@ const movies = {
   ],
   tvwebseries: [
     { title: 'Emoji', image: 'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRyBGj3VcgaQ2J9I3tl68_HC84kNulomfDthLV2FcZKK_RfO_mj0VOiAGw&s=10', link: 'https://movieflix9.netlify.app/emoji' },
-    // Add more movies here...
+    { title: 'Bhog (2025)', image: 'https://m.media-amazon.com/images/M/MV5BZjllZjRiZGEtNzc2Mi00ZmFmLTllYWEtYzYxMThhMTgxYjM3XkEyXkFqcGc@._V1_QL75_UX808_.jpg', link: 'https://movieflix9.netlify.app/bhog' },
+    { title: 'tvwebseries', image: 'movie9.jpg', link: 'https://example.com/movie9' },
+    { title: 'tvwebseries', image: 'movie10.jpg', link: 'https://example.com/movie10' },
+    { title: 'tvwebseries', image: 'movie11.jpg', link: 'https://example.com/movie11' },
+    { title: 'tvwebseries', image: 'movie12.jpg', link: 'https://example.com/movie12' },
+    { title: 'tvwebseries', image: 'movie13.jpg', link: 'https://example.com/movie13' },
+    { title: 'tvwebseries', image: 'movie14.jpg', link: 'https://example.com/movie14' },
   ],
   animeMovies: [
     { title: 'Anime Movie 1', image: 'anime1.jpg', link: 'https://example.com/anime1' },
