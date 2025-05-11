@@ -45,9 +45,18 @@ document.addEventListener("DOMContentLoaded", function () {
     container.innerHTML = '';
 
     const filtered = movies.filter(movie => movie.categories.includes(categoryTag));
-    const limit = showAll ? filtered.length : 12;
+    if (filtered.length === 0) {
+      const noMovie = document.createElement('p');
+      noMovie.textContent = 'এই ক্যাটাগরিতে কোনো মুভি নেই।';
+      noMovie.style.color = '#ccc';
+      noMovie.style.textAlign = 'center';
+      noMovie.style.margin = '20px';
+      container.appendChild(noMovie);
+      return;
+    }
 
-    for (let i = 0; i < limit; i++) {
+    const limit = showAll ? filtered.length : 12;
+    for (let i = 0; i < Math.min(limit, filtered.length); i++) {
       const movieCard = createMovieCard(filtered[i]);
       container.appendChild(movieCard);
     }
@@ -113,6 +122,10 @@ document.addEventListener("DOMContentLoaded", function () {
       noResult.id = 'noResultMessage';
       noResult.href = 'movie-request.html';
       noResult.textContent = 'এই মুভি টি নেই, এখানে ক্লিক করে রিকুয়েস্ট করুন';
+      noResult.style.display = 'block';
+      noResult.style.textAlign = 'center';
+      noResult.style.margin = '20px';
+      noResult.style.color = '#fff';
       document.body.insertBefore(noResult, document.querySelector('footer'));
     }
   });
