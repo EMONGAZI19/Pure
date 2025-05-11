@@ -1,128 +1,131 @@
-const movies = [
-  {
-    title: 'Borbaad',
-    image: 'https://m.media-amazon.com/images/M/MV5BNDY1ZWQyNjMtYTJjMC00ZjM3LTk3MWItMTcwNjg4ODZmODZhXkEyXkFqcGc@._V1_QL75_UX704_.jpg',
-    link: 'https://movieflix9.netlify.app/borbaadhd',
-    categories: ['latestMovies', 'banglaMovies']
-  },
-  {
-    title: 'Magic Movie',
-    image: 'https://resizing.flixster.com/-XZAfHZM39UwaGJIFWKAE8fS0ak=/v3/t/assets/p26313078_v_v8_aa.jpg',
-    link: 'https://movieflix9.netlify.app/magic',
-    categories: ['latestMovies']
-  },
-  {
-    title: 'The Bhootni',
-    image: 'https://i.postimg.cc/mDxKxYRF/images-4.jpg',
-    link: 'https://movieflix9.netlify.app/bhootni',
-    categories: ['latestMovies']
-  },
-  {
-    title: 'Jongli',
-    image: 'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQQgqAc6VFQWRzapb9n60cSTH7w_VNovCjgufyFY1ll6x-iaWJwB1xnv9Im&s=10',
-    link: 'https://movieflix9.netlify.app/jongli',
-    categories: ['latestMovies', 'banglaMovies']
-  },
-  {
-    title: 'Jaat (2025)',
-    image: 'https://m.media-amazon.com/images/M/MV5BNDQxYmM2YmUtOGJmYy00YzcyLTkxOTItYmI3ZTZjZmUwZDMxXkEyXkFqcGc@._V1_FMjpg_UY2048_.jpg',
-    link: 'https://movieflix9.netlify.app/jaat',
-    categories: ['latestMovies']
-  },
-  {
-    title: 'Movie 6',
-    image: 'https://m.media-amazon.com/images/M/MV5BNDY1ZWQyNjMtYTJjMC00ZjM3LTk3MWItMTcwNjg4ODZmODZhXkEyXkFqcGc@._V1_QL75_UX704_.jpg',
-    link: 'https://example.com/movie6',
-    categories: ['latestMovies']
-  },
-  {
-    title: 'Movie 7',
-    image: 'https://m.media-amazon.com/images/M/MV5BNDY1ZWQyNjMtYTJjMC00ZjM3LTk3MWItMTcwNjg4ODZmODZhXkEyXkFqcGc@._V1_QL75_UX704_.jpg',
-    link: 'https://example.com/movie7',
-    categories: ['latestMovies']
-  },
-  {
-    title: 'Movie 8',
-    image: 'movie8.jpg',
-    link: 'https://example.com/movie8',
-    categories: ['latestMovies']
-  },
-  {
-    title: 'Movie 9',
-    image: 'movie9.jpg',
-    link: 'https://example.com/movie9',
-    categories: ['latestMovies', 'tvwebseries']
-  },
-  {
-    title: 'Movie 10',
-    image: 'movie10.jpg',
-    link: 'https://example.com/movie10',
-    categories: ['latestMovies', 'tvwebseries']
-  },
-  {
-    title: 'Movie 11',
-    image: 'movie11.jpg',
-    link: 'https://example.com/movie11',
-    categories: ['latestMovies', 'tvwebseries']
-  },
-  {
-    title: 'Movie 12',
-    image: 'movie12.jpg',
-    link: 'https://example.com/movie12',
-    categories: ['latestMovies', 'tvwebseries']
-  },
-  {
-    title: 'Movie 13',
-    image: 'movie13.jpg',
-    link: 'https://example.com/movie13',
-    categories: ['latestMovies', 'tvwebseries']
-  },
-  {
-    title: 'Movie 14',
-    image: 'movie14.jpg',
-    link: 'https://example.com/movie14',
-    categories: ['latestMovies', 'tvwebseries']
-  },
-  {
-    title: 'Movie 15',
-    image: 'movie15.jpg',
-    link: 'https://example.com/movie15',
-    categories: ['latestMovies']
-  },
-  {
-    title: 'Hindi Movie 1',
-    image: 'hindi1.jpg',
-    link: 'https://example.com/hindi1',
-    categories: ['hindiDubbedMovies']
-  },
-  {
-    title: 'Hollywood Movie 1',
-    image: 'hollywood1.jpg',
-    link: 'https://example.com/hollywood1',
-    categories: ['hollywoodMovies']
-  },
-  {
-    title: 'Bangla Dubbed Movie 1',
-    image: 'bangladubbed1.jpg',
-    link: 'https://example.com/bangladubbed1',
-    categories: ['banglaDubbedMovies']
-  },
-  {
-    title: 'Emoji',
-    image: 'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRyBGj3VcgaQ2J9I3tl68_HC84kNulomfDthLV2FcZKK_RfO_mj0VOiAGw&s=10',
-    link: 'https://movieflix9.netlify.app/emoji',
-    categories: ['tvwebseries']
-  },
-  {
-    title: 'Bhog (2025)',
-    image: 'https://m.media-amazon.com/images/M/MV5BZjllZjRiZGEtNzc2Mi00ZmFmLTllYWEtYzYxMThhMTgxYjM3XkEyXkFqcGc@._V1_QL75_UX808_.jpg',
-    link: 'https://movieflix9.netlify.app/bhog',
-    categories: ['tvwebseries']
-  },
-  {
-    title: 'Anime Movie 1',
-    image: 'anime1.jpg',
-    link: 'https://example.com/anime1',
-    categories: ['animeMovies']
+document.addEventListener("DOMContentLoaded", function () {
+  const menuToggle = document.getElementById('menuToggle');
+  const navMenu = document.getElementById('navMenu');
+  const searchInput = document.getElementById('searchInput');
+
+  // Toggle menu
+  menuToggle.addEventListener('click', (event) => {
+    navMenu.classList.toggle('active');
+    event.stopPropagation();
+  });
+
+  // Close menu if clicked outside
+  document.addEventListener('mousedown', (event) => {
+    if (!navMenu.contains(event.target) && !menuToggle.contains(event.target)) {
+      navMenu.classList.remove('active');
+    }
+  });
+
+  // Create a movie card
+  function createMovieCard(movie) {
+    const movieCard = document.createElement('div');
+    movieCard.classList.add('movie-card');
+
+    const link = document.createElement('a');
+    link.href = movie.link || "#";
+    link.target = "_blank";
+
+    const movieImage = document.createElement('img');
+    movieImage.src = movie.image;
+    movieImage.alt = movie.title;
+
+    const movieTitle = document.createElement('h3');
+    movieTitle.textContent = movie.title;
+
+    link.appendChild(movieImage);
+    link.appendChild(movieTitle);
+    movieCard.appendChild(link);
+
+    return movieCard;
   }
-];
+
+  // Load movies per category
+  function loadMovies(category, showAll = false) {
+    const movieContainer = document.getElementById(category);
+    movieContainer.innerHTML = '';
+
+    const moviesCategory = movies[category];
+    const limit = showAll ? moviesCategory.length : 12;
+
+    for (let i = 0; i < limit && i < moviesCategory.length; i++) {
+      const movie = moviesCategory[i];
+      const movieCard = createMovieCard(movie);
+      movieContainer.appendChild(movieCard);
+    }
+
+    const button = document.querySelector(`button[data-category="${category}"]`);
+    if (button) {
+      button.textContent = showAll ? 'Show Less' : 'See All';
+      button.setAttribute('data-showing-all', showAll);
+    }
+  }
+
+  // Toggle Show All / Show Less
+  window.toggleShow = function (category) {
+    const button = document.querySelector(`button[data-category="${category}"]`);
+    const isShowingAll = button.getAttribute('data-showing-all') === 'true';
+    loadMovies(category, !isShowingAll);
+  }
+
+  // LIVE SEARCH
+  searchInput.addEventListener('input', function () {
+    const query = searchInput.value.toLowerCase().trim();
+    const oldResults = document.getElementById('searchResults');
+    const oldMessage = document.getElementById('noResultMessage');
+    oldResults?.remove();
+    oldMessage?.remove();
+
+    const allSections = document.querySelectorAll('.movie-section');
+    if (query === "") {
+      allSections.forEach(section => section.style.display = '');
+      return;
+    } else {
+      allSections.forEach(section => section.style.display = 'none');
+    }
+
+    let found = false;
+    const resultSection = document.createElement('div');
+    resultSection.classList.add('movie-section');
+    resultSection.id = 'searchResults';
+
+    const heading = document.createElement('h2');
+    heading.textContent = `Search Results for "${query}"`;
+    resultSection.appendChild(heading);
+
+    const resultGrid = document.createElement('div');
+    resultGrid.classList.add('movie-grid');
+
+    for (const category in movies) {
+      movies[category].forEach(movie => {
+        if (movie.title.toLowerCase().includes(query)) {
+          const movieCard = createMovieCard(movie);
+          resultGrid.appendChild(movieCard);
+          found = true;
+        }
+      });
+    }
+
+    if (found) {
+      resultSection.appendChild(resultGrid);
+      document.body.insertBefore(resultSection, document.querySelector('footer'));
+    } else {
+      const noResult = document.createElement('a');
+      noResult.id = 'noResultMessage';
+      noResult.href = 'movie-request.html';
+      noResult.textContent = 'এই মুভি টি নেই, এখানে ক্লিক করে রিকুয়েস্ট করুন';
+      document.body.insertBefore(noResult, document.querySelector('footer'));
+    }
+  });
+
+  // Initial Load for All Categories
+  const categories = [
+    'latestMovies',
+    'banglaMovies',
+    'hindiDubbedMovies',
+    'hollywoodMovies',
+    'banglaDubbedMovies',
+    'tvwebseries',
+    'animeMovies'
+  ];
+  categories.forEach(category => loadMovies(category));
+});
