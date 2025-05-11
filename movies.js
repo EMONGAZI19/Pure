@@ -123,6 +123,6 @@ const movies = [
     title: 'Anime Movie 1',
     image: 'anime1.jpg',
     link: 'https://example.com/anime1',
-    categories: ['animeMovies']
+    categories: ['animeMovie']
   }
 ];
