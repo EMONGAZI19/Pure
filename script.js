@@ -16,7 +16,7 @@ document.addEventListener("DOMContentLoaded", function () {
     }
   });
 
-  // Create a movie card
+  // Create movie card
   function createMovieCard(movie) {
     const movieCard = document.createElement('div');
     movieCard.classList.add('movie-card');
@@ -39,21 +39,20 @@ document.addEventListener("DOMContentLoaded", function () {
     return movieCard;
   }
 
-  // Load movies per category
-  function loadMovies(category, showAll = false) {
-    const movieContainer = document.getElementById(category);
-    movieContainer.innerHTML = '';
+  // Load movies by category tag
+  function loadMovies(categoryTag, showAll = false) {
+    const container = document.getElementById(categoryTag);
+    container.innerHTML = '';
 
-    const moviesCategory = movies[category];
-    const limit = showAll ? moviesCategory.length : 12;
+    const filtered = movies.filter(movie => movie.category.includes(categoryTag));
+    const limit = showAll ? filtered.length : 12;
 
-    for (let i = 0; i < limit && i < moviesCategory.length; i++) {
-      const movie = moviesCategory[i];
-      const movieCard = createMovieCard(movie);
-      movieContainer.appendChild(movieCard);
+    for (let i = 0; i < limit; i++) {
+      const movieCard = createMovieCard(filtered[i]);
+      container.appendChild(movieCard);
     }
 
-    const button = document.querySelector(`button[data-category="${category}"]`);
+    const button = document.querySelector(`button[data-category="${categoryTag}"]`);
     if (button) {
       button.textContent = showAll ? 'Show Less' : 'See All';
       button.setAttribute('data-showing-all', showAll);
@@ -67,7 +66,7 @@ document.addEventListener("DOMContentLoaded", function () {
     loadMovies(category, !isShowingAll);
   }
 
-  // LIVE SEARCH
+  // Live Search
   searchInput.addEventListener('input', function () {
     const query = searchInput.value.toLowerCase().trim();
     const oldResults = document.getElementById('searchResults');
@@ -84,6 +83,8 @@ document.addEventListener("DOMContentLoaded", function () {
     }
 
     let found = false;
+    const shownTitles = new Set();
+
     const resultSection = document.createElement('div');
     resultSection.classList.add('movie-section');
     resultSection.id = 'searchResults';
@@ -95,15 +96,14 @@ document.addEventListener("DOMContentLoaded", function () {
     const resultGrid = document.createElement('div');
     resultGrid.classList.add('movie-grid');
 
-    for (const category in movies) {
-      movies[category].forEach(movie => {
-        if (movie.title.toLowerCase().includes(query)) {
-          const movieCard = createMovieCard(movie);
-          resultGrid.appendChild(movieCard);
-          found = true;
-        }
-      });
-    }
+    movies.forEach(movie => {
+      if (movie.title.toLowerCase().includes(query) && !shownTitles.has(movie.title)) {
+        const movieCard = createMovieCard(movie);
+        resultGrid.appendChild(movieCard);
+        shownTitles.add(movie.title);
+        found = true;
+      }
+    });
 
     if (found) {
       resultSection.appendChild(resultGrid);
@@ -117,7 +117,7 @@ document.addEventListener("DOMContentLoaded", function () {
     }
   });
 
-  // Initial Load for All Categories
+  // Initial category load
   const categories = [
     'latestMovies',
     'banglaMovies',
