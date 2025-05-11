@@ -2,7 +2,7 @@ const movies = {
   latestMovies: [
     { title: 'Borbaad', image: 'https://m.media-amazon.com/images/M/MV5BNDY1ZWQyNjMtYTJjMC00ZjM3LTk3MWItMTcwNjg4ODZmODZhXkEyXkFqcGc@._V1_QL75_UX704_.jpg', link: 'https://movieflix9.netlify.app/borbaadhd' },
     { title: 'Magic Movie', image: 'https://resizing.flixster.com/-XZAfHZM39UwaGJIFWKAE8fS0ak=/v3/t/assets/p26313078_v_v8_aa.jpg', link: 'https://movieflix9.netlify.app/magic' },
-    { title: 'The Bhootni', image: 'https://i.postimg.cc/1zL1mx0X/images-4.jpg', link: 'https://movieflix9.netlify.app/bhootni' },
+    { title: 'The Bhootni', image: 'https://i.postimg.cc/mDxKxYRF/images-4.jpg', link: 'https://movieflix9.netlify.app/bhootni' },
     { title: 'Jongli', image: 'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQQgqAc6VFQWRzapb9n60cSTH7w_VNovCjgufyFY1ll6x-iaWJwB1xnv9Im&s=10', link: 'https://movieflix9.netlify.app/jongli' },
     { title: 'Jaat (2025)', image: 'https://m.media-amazon.com/images/M/MV5BNDQxYmM2YmUtOGJmYy00YzcyLTkxOTItYmI3ZTZjZmUwZDMxXkEyXkFqcGc@._V1_FMjpg_UY2048_.jpg', link: 'https://movieflix9.netlify.app/jaat' },
     { title: 'Movie 6', image: 'https://m.media-amazon.com/images/M/MV5BNDY1ZWQyNjMtYTJjMC00ZjM3LTk3MWItMTcwNjg4ODZmODZhXkEyXkFqcGc@._V1_QL75_UX704_.jpg', link: 'https://example.com/movie6' },
