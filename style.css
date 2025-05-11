@@ -243,3 +243,10 @@ header {
 .footer-links a:hover {
   color: #00ccbb;
 }
+
+.no-movies-msg {
+  color: #ccc;
+  text-align: center;
+  margin: 20px;
+  font-size: 1.1rem;
+}
