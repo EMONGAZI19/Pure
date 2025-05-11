@@ -244,18 +244,21 @@ header {
   color: #00ccbb;
 }
 
-.no-movie-message {
+/* No Movie */
+.no-movie-message-wrapper {
   display: flex;
   justify-content: center;
   align-items: center;
-  padding: 30px 20px;
+  min-height: 200px;
+}
+
+.no-movie-message {
+  padding: 20px 30px;
   background-color: #1a1a1a;
   color: #ff4d4d;
   font-size: 1.2rem;
   font-weight: 500;
   border-radius: 12px;
-  margin: 40px auto;
-  max-width: 600px;
   box-shadow: 0 0 10px rgba(255, 77, 77, 0.3);
   animation: fadeIn 0.5s ease-in-out;
   text-align: center;
