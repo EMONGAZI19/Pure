@@ -47,11 +47,9 @@ document.addEventListener("DOMContentLoaded", function () {
     const filtered = movies.filter(movie => movie.categories.includes(categoryTag));
     if (filtered.length === 0) {
       const noMovie = document.createElement('p');
-      noMovie.textContent = 'এই ক্যাটাগরিতে কোনো মুভি নেই।';
-      noMovie.style.color = '#ccc';
-      noMovie.style.textAlign = 'center';
-      noMovie.style.margin = '20px';
-      container.appendChild(noMovie);
+noMovie.textContent = 'এই ক্যাটাগরিতে কোনো মুভি নেই।';
+noMovie.classList.add('no-movie-message');
+container.appendChild(noMovie);
       return;
     }
 
