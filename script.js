@@ -44,7 +44,7 @@ document.addEventListener("DOMContentLoaded", function () {
     const container = document.getElementById(categoryTag);
     container.innerHTML = '';
 
-    const filtered = movies.filter(movie => movie.category.includes(categoryTag));
+    const filtered = movies.filter(movie => movie.categories.includes(categoryTag));
     const limit = showAll ? filtered.length : 12;
 
     for (let i = 0; i < limit; i++) {
