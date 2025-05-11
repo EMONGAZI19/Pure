@@ -46,12 +46,12 @@ document.addEventListener("DOMContentLoaded", function () {
 
     const filtered = movies.filter(movie => movie.categories.includes(categoryTag));
     if (filtered.length === 0) {
-      const noMovie = document.createElement('p');
-noMovie.textContent = 'এই ক্যাটাগরিতে কোনো মুভি নেই।';
-noMovie.classList.add('no-movie-message');
-container.appendChild(noMovie);
-      return;
-    }
+  const noMovie = document.createElement('div');
+  noMovie.classList.add('no-movie-message-wrapper');
+  noMovie.innerHTML = `<p class="no-movie-message">এই ক্যাটাগরিতে কোনো মুভি নেই।</p>`;
+  container.appendChild(noMovie);
+  return;
+}
 
     const limit = showAll ? filtered.length : 12;
     for (let i = 0; i < Math.min(limit, filtered.length); i++) {
