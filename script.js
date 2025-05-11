@@ -46,6 +46,7 @@ document.addEventListener("DOMContentLoaded", function () {
 
     const filtered = movies.filter(movie => movie.categories.includes(categoryTag));
     if (filtered.length === 0) {
+  coif (filtered.length === 0) {
   const wrapper = document.createElement('div');
   wrapper.classList.add('no-movie-message-wrapper');
 
