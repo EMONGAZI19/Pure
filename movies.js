@@ -3,7 +3,7 @@ const movies = [
     title: 'Borbaad',
     image: 'https://m.media-amazon.com/images/M/MV5BNDY1ZWQyNjMtYTJjMC00ZjM3LTk3MWItMTcwNjg4ODZmODZhXkEyXkFqcGc@._V1_QL75_UX704_.jpg',
     link: 'https://movieflix9.netlify.app/borbaadhd',
-    categories: ['latestMovies', 'banglaMovies']
+    categories: ['latestMovies', 'banglaMovies'],
     comingsoon: true
   },
   {
