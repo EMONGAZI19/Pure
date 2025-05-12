@@ -13,7 +13,7 @@ const movies = [
   },
   {
     title: 'The Bhootni',
-    image: 'https://i.postimg.cc/mDxKxYRF/images-4.jpg',
+    image: 'https://i.postimg.cc/MGm9VvFm/20250512-002743.png',
     link: 'https://movieflix9.netlify.app/bhootni',
     categories: ['latestMovies']
   },
