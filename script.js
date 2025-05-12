@@ -20,19 +20,35 @@ document.addEventListener("DOMContentLoaded", function () {
   function createMovieCard(movie) {
     const movieCard = document.createElement('div');
     movieCard.classList.add('movie-card');
+    if (movie.comingSoon) {
+      movieCard.classList.add('coming-soon-active');
+    }
 
     const link = document.createElement('a');
     link.href = movie.link || "#";
     link.target = "_blank";
 
+    const wrapper = document.createElement('div');
+    wrapper.classList.add('movie-image-wrapper');
+
     const movieImage = document.createElement('img');
     movieImage.src = movie.image;
     movieImage.alt = movie.title;
+    movieImage.classList.add('movie-image');
+
+    wrapper.appendChild(movieImage);
+
+    if (movie.comingSoon) {
+      const comingSoonText = document.createElement('div');
+      comingSoonText.classList.add('coming-soon');
+      comingSoonText.textContent = "Coming Soon";
+      wrapper.appendChild(comingSoonText);
+    }
 
     const movieTitle = document.createElement('h3');
     movieTitle.textContent = movie.title;
 
-    link.appendChild(movieImage);
+    link.appendChild(wrapper);
     link.appendChild(movieTitle);
     movieCard.appendChild(link);
 
@@ -46,12 +62,12 @@ document.addEventListener("DOMContentLoaded", function () {
 
     const filtered = movies.filter(movie => movie.categories.includes(categoryTag));
     if (filtered.length === 0) {
-  const noMovie = document.createElement('div');
-  noMovie.classList.add('no-movie-message-wrapper');
-  noMovie.innerHTML = `<p class="no-movie-message">এই ক্যাটাগরিতে কোনো মুভি নেই।</p>`;
-  container.appendChild(noMovie);
-  return;
-}
+      const noMovie = document.createElement('div');
+      noMovie.classList.add('no-movie-message-wrapper');
+      noMovie.innerHTML = `<p class="no-movie-message">এই ক্যাটাগরিতে কোনো মুভি নেই।</p>`;
+      container.appendChild(noMovie);
+      return;
+    }
 
     const limit = showAll ? filtered.length : 12;
     for (let i = 0; i < Math.min(limit, filtered.length); i++) {
