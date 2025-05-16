@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="bn">
+<head>
+  <meta charset="UTF-8" />
+  <title>Movie Flix Player</title>
+  <script src="https://cdn.jwplayer.com/libraries/IDzF9Zmk.js"></script>
+  <style>
+    body {
+      margin: 0;
+      background: #000;
+      color: #00ffee;
+      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+      display: flex;
+      flex-direction: column;
+      min-height: 100vh;
+      align-items: center;
+      padding: 20px 10px;
+    }
+    header {
+      width: 100%;
+      max-width: 950px;
+      background: #111;
+      padding: 30px 0;
+      text-align: center;
+      font-size: 42px;
+      font-weight: bold;
+      letter-spacing: 3px;
+      color: #00ffee;
+      box-shadow: 0 2px 5px rgba(0,255,238,0.2);
+      border-radius: 12px;
+      margin-bottom: 35px;
+    }
+    .player-box {
+      background: #111;
+      border: 2px solid #00ffee;
+      border-radius: 15px;
+      box-shadow: 0 0 25px #00ffee88;
+      max-width: 950px;
+      width: 95%;
+      padding: 25px 30px 40px;
+      box-sizing: border-box;
+    }
+    #player, iframe {
+      width: 100%;
+      aspect-ratio: 16 / 9;
+      border-radius: 12px;
+      overflow: hidden;
+      background: #000;
+    }
+    .error-message {
+      margin: auto;
+      color: #00ffee;
+      font-size: 24px;
+      font-weight: 600;
+      text-align: center;
+      padding: 60px 20px;
+      background: #111;
+      border: 2px solid #00ffee;
+      border-radius: 12px;
+      max-width: 450px;
+      box-shadow: 0 0 20px #00ffeeaa;
+    }
+  </style>
+</head>
+<body>
+
+  <header>Movie Flix Player</header>
+
+  <div class="player-box" id="playerContainer">
+    <div id="player"></div>
+  </div>
+
+  <script>
+    jwplayer.key = "jUPtP9GQETpgOsLD1S6IJ9rZmc9KoMgd";
+
+    function getVideoUrl() {
+      const urlParams = new URLSearchParams(window.location.search);
+      return urlParams.get('video');
+    }
+
+    const videoUrl = getVideoUrl();
+
+    if (videoUrl) {
+      if (videoUrl.includes("streamtape.com")) {
+        // Show iframe instead of jwplayer
+        document.getElementById('playerContainer').innerHTML = `
+          <iframe src="${videoUrl}" frameborder="0" allowfullscreen allow="autoplay" style="width:100%;aspect-ratio:16/9;border-radius:12px;"></iframe>
+        `;
+      } else {
+        // Normal .mp4 video handled by JW Player
+        jwplayer("player").setup({
+          file: videoUrl,
+          image: "https://i.ibb.co/2d9qvh3/default-thumbnail.jpg",
+          width: "100%",
+          aspectratio: "16:9",
+          autostart: false,
+          controls: true,
+          preload: "auto"
+        });
+      }
+    } else {
+      document.body.innerHTML = '<div class="error-message">ভিডিও লিঙ্ক পাওয়া যায়নি!</div>';
+    }
+  </script>
+
+</body>
+</html>
