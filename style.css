@@ -138,23 +138,30 @@ header {
 
 .movie-grid {
   display: grid;
-  grid-template-columns: repeat(4, 1fr);
-  gap: 20px;
-  padding: 0 20px;
+  gap: 10px;
+  grid-template-columns: repeat(auto-fill, minmax(150px, 1fr)); /* এখানে 150px সাইজ ছোট */
 }
 
-.movie-card {
-  position: relative;
-  background: #333;
-  padding: 10px;
+@media (max-width: 768px) {
+  .movie-grid {
+    grid-template-columns: repeat(3, 1fr); /* মোবাইলে ৩ টা করে */
+  }
+}
+
+@media (min-width: 769px) {
+  .movie-grid {
+    grid-template-columns: repeat(6, 1fr); /* বড় স্ক্রিনে ৬ টা করে */
+  }
+}
+
+.movie-card img {
+  width: 100%;
+  height: auto;
   border-radius: 8px;
-  box-shadow: 0 4px 10px rgba(0, 255, 255, 0.3);
-  text-align: center;
-  transition: transform 0.2s ease;
 }
 
-.movie-card:hover {
-  transform: scale(1.03);
+.movie-card h3 {
+  font-size: 14px;
 }
 
 .movie-image-wrapper {
