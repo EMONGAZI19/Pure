@@ -138,30 +138,41 @@ header {
 
 .movie-grid {
   display: grid;
+  grid-template-columns: repeat(8, 1fr); /* ডেক্সটপে ৮টি কলাম */
   gap: 10px;
-  grid-template-columns: repeat(auto-fill, minmax(150px, 1fr)); /* এখানে 150px সাইজ ছোট */
+  padding: 0 10px;
+}
+
+@media (max-width: 1024px) {
+  .movie-grid {
+    grid-template-columns: repeat(6, 1fr); /* ট্যাবলেটে ৬টি কলাম */
+  }
 }
 
 @media (max-width: 768px) {
   .movie-grid {
-    grid-template-columns: repeat(3, 1fr); /* মোবাইলে ৩ টা করে */
+    grid-template-columns: repeat(4, 1fr); /* মোবাইলে ৪টি কলাম */
   }
 }
 
-@media (min-width: 769px) {
+@media (max-width: 480px) {
   .movie-grid {
-    grid-template-columns: repeat(6, 1fr); /* বড় স্ক্রিনে ৬ টা করে */
+    grid-template-columns: repeat(3, 1fr); /* ছোট মোবাইলে ৩টি কলাম */
   }
 }
 
-.movie-card img {
-  width: 100%;
-  height: auto;
+.movie-card {
+  position: relative;
+  background: #333;
+  padding: 10px;
   border-radius: 8px;
+  box-shadow: 0 4px 10px rgba(0, 255, 255, 0.3);
+  text-align: center;
+  transition: transform 0.2s ease;
 }
 
-.movie-card h3 {
-  font-size: 14px;
+.movie-card:hover {
+  transform: scale(1.03);
 }
 
 .movie-image-wrapper {
@@ -238,13 +249,6 @@ header {
   color: #fff;
 }
 
-/* Media Queries */
-@media (max-width: 768px) {
-  .movie-grid {
-    grid-template-columns: repeat(2, 1fr);
-  }
-}
-
 /* Footer */
 .footer {
   background-color: #000;
@@ -293,4 +297,10 @@ header {
   box-shadow: 0 0 10px rgba(255, 77, 77, 0.3);
   animation: fadeIn 0.5s ease-in-out;
   text-align: center;
+}
+
+/* Animation */
+@keyframes fadeIn {
+  from { opacity: 0; transform: translateY(10px); }
+  to { opacity: 1; transform: translateY(0); }
 }
